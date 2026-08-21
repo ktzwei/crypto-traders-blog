@@ -76,10 +76,12 @@ footer { padding:40px 0 64px; text-align:center; color:var(--muted); font-size:1
   td{padding:10px 8px;}
   img{border-radius:8px; margin:10px 0;}
 }
-.lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.93); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:20px; }
-.lightbox.active { display:flex; }
-.lightbox img { max-width:100%; max-height:100%; border-radius:6px; }
-.lightbox .hint { position:fixed; bottom:20px; left:0; right:0; text-align:center; color:#8a94ab; font-size:12px; }
+.lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:9999; overflow:hidden; }
+.lightbox.active { display:block; }
+.lb-stage { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; overflow:hidden; touch-action:none; }
+.lightbox img { max-width:92%; max-height:92%; border-radius:6px; transform-origin:center center; will-change:transform; }
+.lightbox .hint { position:fixed; bottom:14px; left:0; right:0; text-align:center; color:#8a94ab; font-size:12px; pointer-events:none; z-index:10001; }
+.lb-close { position:fixed; top:12px; right:18px; color:#fff; font-size:30px; line-height:1; cursor:pointer; z-index:10001; padding:6px; }
 """
 
 # markdown 里可能含 HTML 表格/列表, 用 markdown 库渲染最稳
@@ -94,19 +96,58 @@ def render_report_md_to_html(md_text: str) -> str:
     )
 
 
-LIGHTBOX_HTML = """<div class="lightbox" id="lightbox"><img id="lightbox-img" src="" alt=""><div class="hint">点击任意处关闭</div></div>
+LIGHTBOX_HTML = """<div class="lightbox" id="lightbox">
+  <div class="lb-close" id="lb-close">✕</div>
+  <div class="lb-stage" id="lb-stage"><img id="lightbox-img" src="" alt=""></div>
+  <div class="hint">双指缩放 · 拖动查看 · 双击复位</div>
+</div>
 <script>
 (function(){
   var lb = document.getElementById('lightbox');
-  var li = document.getElementById('lightbox-img');
+  var stage = document.getElementById('lb-stage');
+  var img = document.getElementById('lightbox-img');
+  var close = document.getElementById('lb-close');
+  var scale = 1, tx = 0, ty = 0;
+  var startDist = 0, startScale = 1;
+  var lastX = 0, lastY = 0, startTx = 0, startTy = 0;
+
+  function apply(){ img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')'; }
+  function reset(){ scale = 1; tx = 0; ty = 0; apply(); }
+  function open(src){ img.src = src; scale = 2; tx = 0; ty = 0; apply(); lb.classList.add('active'); }
+  function closeLb(){ lb.classList.remove('active'); }
+
   document.addEventListener('click', function(e){
     var t = e.target;
-    if (t.tagName === 'IMG' && t.id !== 'lightbox-img') {
-      li.src = t.src;
-      lb.classList.add('active');
-    }
+    if (t.tagName === 'IMG' && t.id !== 'lightbox-img'){ open(t.src); }
   });
-  lb.addEventListener('click', function(){ lb.classList.remove('active'); });
+  close.addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+
+  stage.addEventListener('touchstart', function(e){
+    if (e.touches.length === 2){
+      startDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+      startScale = scale;
+    } else if (e.touches.length === 1){
+      lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
+      startTx = tx; startTy = ty;
+    }
+  }, {passive:false});
+
+  stage.addEventListener('touchmove', function(e){
+    e.preventDefault();
+    if (e.touches.length === 2){
+      var d = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+      scale = Math.max(1, Math.min(6, startScale * d / startDist));
+      apply();
+    } else if (e.touches.length === 1 && scale > 1){
+      tx = startTx + (e.touches[0].clientX - lastX);
+      ty = startTy + (e.touches[0].clientY - lastY);
+      apply();
+    }
+  }, {passive:false});
+
+  stage.addEventListener('dblclick', function(){ if (scale > 1) reset(); else { scale = 2.5; apply(); } });
+  stage.addEventListener('wheel', function(e){ e.preventDefault(); scale = Math.max(1, Math.min(6, scale * (e.deltaY < 0 ? 1.12 : 0.9))); apply(); }, {passive:false});
 })();
 </script>"""
 
@@ -118,7 +159,7 @@ def build_report_page(date_label: str, body_html: str, prev_link: str = "") -> s
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>{title}</title>
 <style>{STYLE}</style>
 </head>
@@ -146,7 +187,7 @@ def build_index_page(entries: list[tuple[str, str]]) -> str:
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>Crypto 交易员观点日报 · 归档</title>
 <style>{STYLE}
 .list {{ list-style:none; padding:0; }}

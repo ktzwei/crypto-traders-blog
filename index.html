@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>Crypto 交易员观点日报 · 归档</title>
 <style>
 :root {
@@ -57,10 +57,12 @@ footer { padding:40px 0 64px; text-align:center; color:var(--muted); font-size:1
   td{padding:10px 8px;}
   img{border-radius:8px; margin:10px 0;}
 }
-.lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.93); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:20px; }
-.lightbox.active { display:flex; }
-.lightbox img { max-width:100%; max-height:100%; border-radius:6px; }
-.lightbox .hint { position:fixed; bottom:20px; left:0; right:0; text-align:center; color:#8a94ab; font-size:12px; }
+.lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:9999; overflow:hidden; }
+.lightbox.active { display:block; }
+.lb-stage { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; overflow:hidden; touch-action:none; }
+.lightbox img { max-width:92%; max-height:92%; border-radius:6px; transform-origin:center center; will-change:transform; }
+.lightbox .hint { position:fixed; bottom:14px; left:0; right:0; text-align:center; color:#8a94ab; font-size:12px; pointer-events:none; z-index:10001; }
+.lb-close { position:fixed; top:12px; right:18px; color:#fff; font-size:30px; line-height:1; cursor:pointer; z-index:10001; padding:6px; }
 
 .list { list-style:none; padding:0; }
 .list li { padding:14px 0; border-bottom:1px dashed var(--border); }
