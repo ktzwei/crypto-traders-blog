@@ -59,8 +59,6 @@ tr:last-child td { border-bottom:none; }
 td:first-child { font-weight:600; color:var(--accent); white-space:nowrap; }
 hr { border:none; border-top:1px solid var(--border); margin:28px 0; }
 img { max-width:100%; height:auto; border-radius:10px; margin:12px 0; display:block; }
-.imgwrap { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:12px 0; }
-.imgwrap img { max-width:100%; height:auto; border-radius:10px; display:block; }
 footer { padding:40px 0 64px; text-align:center; color:var(--muted); font-size:13px; }
 .back { display:inline-block; margin-top:12px; font-family:var(--mono); font-size:13px; }
 .section { padding:12px 0; }
@@ -77,7 +75,6 @@ footer { padding:40px 0 64px; text-align:center; color:var(--muted); font-size:1
   table{font-size:13px;}
   td{padding:10px 8px;}
   img{border-radius:8px; margin:10px 0;}
-  .imgwrap img{max-width:none;}
 }
 .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:9999; overflow:hidden; }
 .lightbox.active { display:block; }
@@ -93,17 +90,10 @@ import markdown
 
 def render_report_md_to_html(md_text: str) -> str:
     """把 markdown 日报正文渲染成 HTML body 片段."""
-    html = markdown.markdown(
+    return markdown.markdown(
         md_text,
         extensions=["tables", "fenced_code", "sane_lists"],
     )
-    # 图片包进可横向滚动容器：手机端保持原始尺寸，横滑即可看清，不用点击放大
-    html = re.sub(
-        r"<p>\s*<img([^>]*?)/?>\s*</p>",
-        r'<div class="imgwrap"><img\1></div>',
-        html,
-    )
-    return html
 
 
 LIGHTBOX_HTML = """<div class="lightbox" id="lightbox">
