@@ -113,8 +113,19 @@ LIGHTBOX_HTML = """<div class="lightbox" id="lightbox">
 
   function apply(){ img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')'; }
   function reset(){ scale = 1; tx = 0; ty = 0; apply(); }
-  function open(src){ img.src = src; scale = 2; tx = 0; ty = 0; apply(); lb.classList.add('active'); }
+  function open(src){ img.src = src; reset(); lb.classList.add('active'); }
   function closeLb(){ lb.classList.remove('active'); }
+
+  function clamp(){
+    if (scale <= 1){ tx = 0; ty = 0; return; }
+    var vw = stage.clientWidth, vh = stage.clientHeight;
+    var dispW = img.offsetWidth * scale;
+    var dispH = img.offsetHeight * scale;
+    var maxTx = Math.max(0, (dispW - vw) / 2);
+    var maxTy = Math.max(0, (dispH - vh) / 2);
+    tx = Math.max(-maxTx, Math.min(maxTx, tx));
+    ty = Math.max(-maxTy, Math.min(maxTy, ty));
+  }
 
   document.addEventListener('click', function(e){
     var t = e.target;
@@ -127,7 +138,7 @@ LIGHTBOX_HTML = """<div class="lightbox" id="lightbox">
     if (e.touches.length === 2){
       startDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
       startScale = scale;
-    } else if (e.touches.length === 1){
+    } else if (e.touches.length === 1 && scale > 1){
       lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
       startTx = tx; startTy = ty;
     }
@@ -142,6 +153,7 @@ LIGHTBOX_HTML = """<div class="lightbox" id="lightbox">
     } else if (e.touches.length === 1 && scale > 1){
       tx = startTx + (e.touches[0].clientX - lastX);
       ty = startTy + (e.touches[0].clientY - lastY);
+      clamp();
       apply();
     }
   }, {passive:false});
