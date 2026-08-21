@@ -58,10 +58,24 @@ td { padding:12px; border-bottom:1px solid var(--border); vertical-align:top; }
 tr:last-child td { border-bottom:none; }
 td:first-child { font-weight:600; color:var(--accent); white-space:nowrap; }
 hr { border:none; border-top:1px solid var(--border); margin:28px 0; }
+img { max-width:100%; height:auto; border-radius:10px; margin:12px 0; display:block; }
 footer { padding:40px 0 64px; text-align:center; color:var(--muted); font-size:13px; }
 .back { display:inline-block; margin-top:12px; font-family:var(--mono); font-size:13px; }
 .section { padding:12px 0; }
-@media (max-width:600px){ .wrap{padding:0 18px;} header{padding:40px 0 24px;} td:first-child{white-space:normal;} }
+@media (max-width:600px){
+  .wrap{padding:0 16px;}
+  header{padding:36px 0 20px;}
+  body{font-size:15px; line-height:1.75;}
+  h1{font-size:24px;}
+  h2{font-size:18px; margin:22px 0 12px;}
+  h3{font-size:16px;}
+  blockquote{padding:6px 14px; margin:12px 0;}
+  ul,ol{padding-left:20px;}
+  td:first-child{white-space:normal;}
+  table{font-size:13px;}
+  td{padding:10px 8px;}
+  img{border-radius:8px; margin:10px 0;}
+}
 """
 
 # markdown 里可能含 HTML 表格/列表, 用 markdown 库渲染最稳
