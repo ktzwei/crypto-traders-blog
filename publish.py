@@ -76,6 +76,10 @@ footer { padding:40px 0 64px; text-align:center; color:var(--muted); font-size:1
   td{padding:10px 8px;}
   img{border-radius:8px; margin:10px 0;}
 }
+.lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.93); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:20px; }
+.lightbox.active { display:flex; }
+.lightbox img { max-width:100%; max-height:100%; border-radius:6px; }
+.lightbox .hint { position:fixed; bottom:20px; left:0; right:0; text-align:center; color:#8a94ab; font-size:12px; }
 """
 
 # markdown 里可能含 HTML 表格/列表, 用 markdown 库渲染最稳
@@ -88,6 +92,23 @@ def render_report_md_to_html(md_text: str) -> str:
         md_text,
         extensions=["tables", "fenced_code", "sane_lists"],
     )
+
+
+LIGHTBOX_HTML = """<div class="lightbox" id="lightbox"><img id="lightbox-img" src="" alt=""><div class="hint">点击任意处关闭</div></div>
+<script>
+(function(){
+  var lb = document.getElementById('lightbox');
+  var li = document.getElementById('lightbox-img');
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if (t.tagName === 'IMG' && t.id !== 'lightbox-img') {
+      li.src = t.src;
+      lb.classList.add('active');
+    }
+  });
+  lb.addEventListener('click', function(){ lb.classList.remove('active'); });
+})();
+</script>"""
 
 
 def build_report_page(date_label: str, body_html: str, prev_link: str = "") -> str:
@@ -112,6 +133,7 @@ def build_report_page(date_label: str, body_html: str, prev_link: str = "") -> s
 {back}
 </div>
 <footer><div>仅供学习参考，不构成投资建议</div></footer>
+{LIGHTBOX_HTML}
 </body></html>
 """
 
