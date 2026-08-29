@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Crypto 交易员观点日报 · 2026.08.29</title>
+<style>
+:root {
+  --bg: #0a0e17; --surface: #111726; --surface-2: #1a2233; --border: #232d42;
+  --text: #e6eaf2; --muted: #8a94ab; --accent: #f7931a; --green: #38d996;
+  --red: #ff5c6c; --amber: #ffb84d; --purple: #a78bfa;
+  --radius: 14px;
+  --mono: "SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:860px; margin:0 auto; padding:0 24px; }
+a { color:var(--accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+header { padding:56px 0 32px; border-bottom:1px solid var(--border); background:radial-gradient(1200px 400px at 20% -10%,rgba(79,140,255,.15),transparent 60%),radial-gradient(800px 300px at 90% -20%,rgba(56,217,150,.08),transparent 60%); }
+.kicker { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:12px; letter-spacing:2px; color:var(--green); text-transform:uppercase; margin-bottom:16px; }
+.kicker::before { content:""; width:28px; height:1px; background:var(--green); }
+h1 { font-size:clamp(26px,4.5vw,38px); font-weight:700; letter-spacing:-0.02em; line-height:1.2; margin-bottom:10px; }
+h1 a { color:var(--text); }
+.date { font-family:var(--mono); color:var(--muted); font-size:14px; }
+h2 { font-size:20px; font-weight:700; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--text); }
+h3 { font-size:17px; font-weight:600; margin:20px 0 10px; color:var(--text); }
+p { margin-bottom:12px; }
+strong { color:var(--text); font-weight:600; }
+em { color:var(--amber); font-style:normal; }
+blockquote { border-left:3px solid var(--green); padding:8px 18px; margin:14px 0; background:rgba(56,217,150,.05); border-radius:0 8px 8px 0; }
+blockquote p { margin:0; }
+code { font-family:var(--mono); color:var(--purple); font-size:13px; background:rgba(167,139,250,.1); padding:1px 7px; border-radius:5px; }
+ul,ol { padding-left:24px; margin:12px 0; }
+li { margin-bottom:8px; }
+table { width:100%; border-collapse:collapse; margin:16px 0; font-size:14px; }
+th { text-align:left; font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); padding:10px 12px; border-bottom:1px solid var(--border); }
+td { padding:12px; border-bottom:1px solid var(--border); vertical-align:top; }
+tr:last-child td { border-bottom:none; }
+td:first-child { font-weight:600; color:var(--accent); white-space:nowrap; }
+hr { border:none; border-top:1px solid var(--border); margin:28px 0; }
+img { max-width:100%; height:auto; border-radius:10px; margin:12px 0; display:block; }
+footer { padding:40px 0 64px; text-align:center; color:var(--muted); font-size:13px; }
+.back { display:inline-block; margin-top:12px; font-family:var(--mono); font-size:13px; }
+.section { padding:12px 0; }
+@media (max-width:600px){
+  .wrap{padding:0 16px;}
+  header{padding:36px 0 20px;}
+  body{font-size:15px; line-height:1.75;}
+  h1{font-size:24px;}
+  h2{font-size:18px; margin:22px 0 12px;}
+  h3{font-size:16px;}
+  blockquote{padding:6px 14px; margin:12px 0;}
+  ul,ol{padding-left:20px;}
+  td:first-child{white-space:normal;}
+  table{font-size:13px;}
+  td{padding:10px 8px;}
+  img{border-radius:8px; margin:10px 0;}
+}
+.lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:9999; overflow:hidden; }
+.lightbox.active { display:block; }
+.lb-stage { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; overflow:hidden; touch-action:none; }
+.lightbox img { max-width:92%; max-height:92%; border-radius:6px; transform-origin:center center; will-change:transform; }
+.lightbox .hint { position:fixed; bottom:14px; left:0; right:0; text-align:center; color:#8a94ab; font-size:12px; pointer-events:none; z-index:10001; }
+.lb-close { position:fixed; top:12px; right:18px; color:#fff; font-size:30px; line-height:1; cursor:pointer; z-index:10001; padding:6px; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="kicker">Crypto Traders Daily · ktzwei.github.io/crypto-traders-blog</div>
+  <h1><a href="../">Crypto 交易员观点日报 · 2026.08.29</a></h1>
+  <div class="date">2026.08.29</div>
+</div></header>
+<div class="wrap">
+<h1>Crypto 交易员观点日报 · 2026.08.29</h1>
+<blockquote>
+<p><strong>时间窗口</strong>：UTC 2026-08-28 00:00 ~ 08-29 00:30（北京时间 08-28 08:00 ~ 08-29 08:30）
+<strong>覆盖博主</strong>：11 位核心博主全覆盖 + 2 位列表新增成员（Ansem、shinigamiXBT）
+<strong>当日主线</strong>：BTC 在 76–83K 区间剧烈拉扯，空头（Wyckoff 派发 + 9 月季节性）与多头（底部已确认、continuation）正面碰撞。</p>
+</blockquote>
+<hr />
+<h2>一、今日共识与分歧</h2>
+<h3>🐻 空头阵营（短期看回调，但几乎没人看崩）</h3>
+<p>这是今天最硬的一条共识线：<strong>价格行为派多数认为 BTC 反弹到 80–83K 后遭遇「确认供应」，短期还要向下找一次需求</strong>，核心逻辑是「周线/月线收在阻力、派发结构未破」。</p>
+<ul>
+<li><strong>@Stefan_B_Trades</strong>（最系统）—— 用 Wyckoff + 订单流：月线若 3 天内收在 76.5K 下方 = 确认供应，最近需求区在 <strong>66K</strong>。已连续在 80.4K 上方做空，<code>.786</code> 回撤位全部打到，<code>tp1</code> 已落袋、止损移到保本（risk-free）。观点：「9 月会流血，概率很高」。</li>
+<li><strong>@crptAtlas</strong>（最激进，喊单风格）—— 给出一条完整下行路径 <strong>$81K → $74K → $63K → $48K</strong>，扬言「这不是牛市也不是熊市，开始前还有一次 crash」。⚠️ 注意此人一天内多次翻转口径（前一条喊「牛市现在开始」、后一条喊「还要崩」），点位当参考、别当依据。</li>
+<li><strong>@astronomer_zero</strong>（最顽固空头）—— 反复在 <strong>79–83K 红色 POI</strong> 区域做空，周五先平掉再「更小仓位重空」，理由是「牛市环境下周五+绿周是最佳做空窗口」。空单已在下跌中吃到 <code>First TP</code>。</li>
+<li><strong>@0xChainMind</strong>（结构派）—— 判断「bearish structure 依然完好」，<strong>需要收盘站上 ~83K 才能翻多</strong>，否则继续新低。同时点出一个统计规律：<strong>8 月收绿 → 9 月必红（4 次全中）</strong>。</li>
+<li><strong>@XBTkaz</strong>（Reversal Pivot 系统）—— 价格精准 pump 进 pivot 时间窗后开始 dump，<strong>78.9K 是主要支撑</strong>，跌破则看更低；若守住并上破则直奔 <strong>83K</strong>。</li>
+<li><strong>@TraderJqrit</strong>（结构+流动性）—— 给出一条 4H 做空计划：4H 结构切换 + 扫掉趋势线流动性 + 供给区完美拒绝，目标 <strong>76K</strong>。</li>
+<li><strong>@OwaisAlpha1</strong>（clean 入场）—— BTC 空单 <code>+2.25R</code> 已全平落袋；ETH 空单逻辑「PWH + 区间高点 sweep、陷阱交易者」，止损已移 BE。</li>
+</ul>
+<h3>🐂 多头阵营（Moe 独扛大旗 + 周期看多）</h3>
+<ul>
+<li><strong>@Crypto_Moe84</strong>（最强多头，情绪化喊单）—— 连续刷屏：<strong>「底部已确认」「不需要突破 50 周均线来确认」</strong>、<code>Continuation to 90K+</code>、<code>BTC 不会给你想买的那个价</code>。方法偏直觉 + 简单线条（IGV/SPX/MAG7 联动），核心论点是「真正的回调会从更高处来，现在只是 LTF noise」。⚠️ 属于典型喊单派，「BOOM BOOM BOOM」类话术要打折，点位可信度低，但方向信号值得记录。</li>
+<li><strong>@Raizelxbt</strong>（高频 scalper，多空通吃）—— 本周 BTC 连续 <code>3RR+</code>、<code>2.7R+</code>、<code>+2.25R</code> 全平，当前 LTF 计划：<strong>看 76460 做多触发</strong>，慢磨也可试多，目标 <strong>84000</strong>；但强调「daily 仍在高位，不会盲目追多」。</li>
+</ul>
+<h3>⚖️ 分歧点</h3>
+<ol>
+<li><strong>底部是否已到</strong>：Moe 说「底部已确认」vs Stefan/Atlas/ChainMind 说「还有一次下行需求、9 月要跌」。</li>
+<li><strong>83K 的性质</strong>：ChainMind/XBTkaz 认为是「翻多的钥匙」，astronomer 认为是「做空 POI」。</li>
+<li><strong>ETH 方向</strong>：ChainMind 看 ETH 本周期跑赢 BTC（ETH/BTC 历史低位筑底），Moe 看多，但 Owais/Stefan 在实盘做空 ETH。</li>
+</ol>
+<hr />
+<h2>二、BTC 关键位与操作</h2>
+<p><strong>阻力位（上方）</strong>
+| 价位 | 含义 | 来源 |
+|------|------|------|
+| 82.5K | 3-drive 摆动空 | XBTkaz |
+| 83K | 收盘站上才翻多 | 0xChainMind |
+| 80–83K | 红色做空 POI | astronomer_zero |</p>
+<p><strong>支撑位（下方）</strong>
+| 价位 | 含义 | 来源 |
+|------|------|------|
+| 78.9K | 主要支撑 / 反弹位 | XBTkaz |
+| 78.4K | 趋势线拒绝处（已弹） | Stefan |
+| 76.5K | 月线确认供应分水岭 | Stefan |
+| 76.6K | monL / 76K 目标 | XBTkaz / TraderJqrit |
+| 75.3K | Wyckoff 派发目标 | Stefan |
+| 74K | 下行第一站 | crptAtlas |
+| 66.7K / 66K | 月线需求区 / GP+POC | Stefan |</p>
+<p><strong>实盘操作记录（已落地）</strong>
+- <code>@OwaisAlpha1</code>：BTC 空 <code>+2.25R</code> 全平 ✅；ETH 空 SL 移 BE、首目标 2484 ✅
+- <code>@Stefan_B_Trades</code>：BTC 空单 <code>.786</code> tp1 全落袋、SL 移 BE，本周 +2.7% ✅；ETH 空 <code>.786</code> + 趋势线支撑处 partial 已平 ✅
+- <code>@Raizelxbt</code>：BTC <code>3RR+</code>、<code>2.7R+</code>、<code>+2.25R</code> 连续全平 ✅；<code>$PENGU</code> 多单 +10% 后 SL 移到低点 ✅
+- <code>@astronomer_zero</code>：BTC 空单 First TP 已吃 ✅（先平后重空）
+- <code>@XBTkaz</code>：短线空单 <code>-0.5R</code> 止损离场（不喜欢 PA 发展，主动认亏）✅
+- <code>@SailorManCrypto</code>：3-drive scalp long 吃到 2R 离场（持有 28 分钟）✅</p>
+<p><strong>预判（尚未触发）</strong>
+- <code>@Raizelxbt</code>：76460 做多触发，目标 84000
+- <code>@TraderJqrit</code>：BTC 空单计划运行中，目标 76K
+- <code>@Stefan_B_Trades</code>：月线收 76.5K 下 → 看 66K；周一起重新布局新的 bearish MSS + Wyckoff 做空
+- <code>@crptAtlas</code>：$81K → $74K → $63K → $48K（喊单，打折看待）</p>
+<p><img alt="Stefan 月线供给判断" src="https://img.ktzwei.top/crypto-traders/2026-08-29/2093339343117058298_59.png" /></p>
+<p><img alt="Owais BTC 空单 +2.25R" src="https://img.ktzwei.top/crypto-traders/2026-08-29/2093375129409696008_83.png" /></p>
+<p><img alt="Raizel 76460 做多触发计划" src="https://img.ktzwei.top/crypto-traders/2026-08-29/2093406799642636584_34.jpg" /></p>
+<p><img alt="XBTkaz Reversal Pivot" src="https://img.ktzwei.top/crypto-traders/2026-08-29/2093262079478440213_38.jpg" /></p>
+<p><img alt="Astronomer 空单 First TP" src="https://img.ktzwei.top/crypto-traders/2026-08-29/2093463796002246796_44.jpg" /></p>
+<hr />
+<h2>三、山寨币机会</h2>
+<table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>观点</th>
+<th>来源</th>
+<th>逻辑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ETH</td>
+<td>看多（跑赢 BTC）</td>
+<td>0xChainMind</td>
+<td>ETH/BTC 在 0.019 底部筑底、历史低位，众人看衰正是反向理由</td>
+</tr>
+<tr>
+<td>$ETH</td>
+<td>看多</td>
+<td>Crypto_Moe84</td>
+<td>支撑上方 hold/ranging，continuation</td>
+</tr>
+<tr>
+<td>$ETH</td>
+<td>空（实盘）</td>
+<td>OwaisAlpha1</td>
+<td>PWH + 区间高点 sweep、陷阱交易者</td>
+</tr>
+<tr>
+<td>$ETH</td>
+<td>空（实盘）</td>
+<td>Stefan_B_Trades</td>
+<td><code>.786</code> + 趋势线、Gann 0.5 回撤</td>
+</tr>
+<tr>
+<td>$HYPE</td>
+<td>看多/抛物线</td>
+<td>0xChainMind / blknoiz06</td>
+<td>最强 alt、趋势不破就一直涨；Ansem 称其为「本周期最安全的 alt」</td>
+</tr>
+<tr>
+<td>$HYPE</td>
+<td>又创 ATH</td>
+<td>SailorManCrypto</td>
+<td>持续新高</td>
+</tr>
+<tr>
+<td>$SOL</td>
+<td>看多</td>
+<td>blknoiz06</td>
+<td>目标 $150（季末）/ $600（周期末）</td>
+</tr>
+<tr>
+<td>$TAO</td>
+<td>关注 181</td>
+<td>Stefan_B_Trades</td>
+<td>唯一提的山寨点位</td>
+</tr>
+<tr>
+<td>$PENGU</td>
+<td>多单 +10%</td>
+<td>Raizelxbt</td>
+<td>已移 SL 到低点，持有中</td>
+</tr>
+<tr>
+<td>$LINK / $SOL</td>
+<td>看多</td>
+<td>Crypto_Moe84</td>
+<td>跟随大盘 continuation</td>
+</tr>
+<tr>
+<td>$ZEC</td>
+<td>看多</td>
+<td>blknoiz06</td>
+<td>称其为「BTC 的最佳 beta」，接近 ATH</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 山寨核心叙事：<strong>Ansem（@blknoiz06）</strong> 反复强调「社交交易 + meme/fi 是本周期 meta」，$PUMP 是他 70%「不动仓」里唯一中盘社交交易标的；$HYPE 是全场最硬共识（三人同时喊）。</p>
+</blockquote>
+<p><img alt="Moe ETH/SOL/LINK continuation" src="https://img.ktzwei.top/crypto-traders/2026-08-29/2093392214672003429_47.png" /></p>
+<p><img alt="Stefan TAO 181" src="https://img.ktzwei.top/crypto-traders/2026-08-29/2093415576831959068_81.jpg" /></p>
+<p><img alt="SailorMan 3-drive scalp long" src="https://img.ktzwei.top/crypto-traders/2026-08-29/2092969940361826698_120.jpg" /></p>
+<hr />
+<h2>四、市场情绪温度计 🌡️</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>读数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多空比</td>
+<td>🐻 偏空（技术派）</td>
+<td>7/11 短线看回调，但无一看崩</td>
+</tr>
+<tr>
+<td>极端情绪</td>
+<td>🔥 高</td>
+<td>Moe 喊「底部确认」、Atlas 喊「还有一次 crash」，两极对立</td>
+</tr>
+<tr>
+<td>季节性</td>
+<td>⚠️ 看空 9 月</td>
+<td>ChainMind(4/4)、XBTkaz、Stefan 三人同提「8 月绿 → 9 月红」</td>
+</tr>
+<tr>
+<td>实盘盈亏</td>
+<td>✅ 空头占优</td>
+<td>本周 Stefan +2.7%、Raizel 多笔 3R+、Owais +2.25R</td>
+</tr>
+<tr>
+<td>动能</td>
+<td>📈 底部反弹中</td>
+<td>从 69K 拉到 80K 后回踩 77K，多空都在抢关键位</td>
+</tr>
+</tbody>
+</table>
+<p><strong>一句话情绪</strong>：市场在「反弹能否延续」上撕扯，空头用「派发 + 季节性」找位置，多头用「底部 + continuation」抗回调，<strong>短期看回调、中期看反转</strong>是当前最大公约数。</p>
+<hr />
+<h2>五、给交易者的一句话</h2>
+<blockquote>
+<p>别在 80K 上方追多、也别在 76K 下方追空——Stefan 的 Wyckoff 派发、ChainMind 的 83K 翻多线、XBTkaz 的 78.9K 支撑，其实指向同一个结论：<strong>这是一个等待方向的区间，不是趋势</strong>。等月线收完（北京时间 9 月 1 日 08:00）再看谁先破位。真正该盯的是三个信号：① 月线是否收在 76.5K 下（Stefan）；② 能否收盘站上 83K（ChainMind）；③ 8 月是否收绿（决定 9 月季节性）。信号出来前，减仓、保本、别硬扛。</p>
+</blockquote>
+<hr />
+<h3>📌 覆盖完整性核对（11 位核心博主）</h3>
+<table>
+<thead>
+<tr>
+<th>博主</th>
+<th>今日状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OwaisAlpha1</td>
+<td>✅ BTC +2.25R / ETH 空单实盘</td>
+</tr>
+<tr>
+<td>Stefan_B_Trades</td>
+<td>✅ 空头系统 / Wyckoff / 66K</td>
+</tr>
+<tr>
+<td>crptAtlas</td>
+<td>✅ 空头路径 81→74→63→48K（喊单）</td>
+</tr>
+<tr>
+<td>0xChainMind</td>
+<td>✅ 83K 翻多线 / ETH 跑赢 / 9 月季节性</td>
+</tr>
+<tr>
+<td>SailorManCrypto</td>
+<td>✅ 区间 scalp / 3-drive / 17R 月收益</td>
+</tr>
+<tr>
+<td>Crypto_Moe84</td>
+<td>✅ 底部确认 / continuation 90K+（喊单）</td>
+</tr>
+<tr>
+<td>LH_btc</td>
+<td>⚠️ <strong>8/20 后停更，今日无新推文</strong>（最近观点：BTC 目标 75-80K OTE、yearly open sub 90K，prefer 更高做空）</td>
+</tr>
+<tr>
+<td>TraderJqrit</td>
+<td>✅ 4H 空单计划 / 76K 目标</td>
+</tr>
+<tr>
+<td>astronomer_zero</td>
+<td>✅ 顽固空头 / 79-83K POI / First TP</td>
+</tr>
+<tr>
+<td>XBTkaz</td>
+<td>✅ Reversal Pivot / 78.9K 支撑</td>
+</tr>
+<tr>
+<td>Raizelxbt</td>
+<td>✅ 高频 scalp / 76460 多触发</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>附：列表新增 @blknoiz06（Ansem）与 @shinigamiXBT 也已纳入，Ansem 看底部确认+社交交易 meta，shinigami 公开看多 BTC/ETH、近期 +2.5R 直播教学。</p>
+</blockquote>
+<a class="back" href="../">← 返回目录</a>
+</div>
+<footer><div>仅供学习参考，不构成投资建议</div></footer>
+<div class="lightbox" id="lightbox">
+  <div class="lb-close" id="lb-close">✕</div>
+  <div class="lb-stage" id="lb-stage"><img id="lightbox-img" src="" alt=""></div>
+  <div class="hint">双指缩放 · 拖动查看 · 双击复位</div>
+</div>
+<script>
+(function(){
+  var lb = document.getElementById('lightbox');
+  var stage = document.getElementById('lb-stage');
+  var img = document.getElementById('lightbox-img');
+  var close = document.getElementById('lb-close');
+  var scale = 1, tx = 0, ty = 0;
+  var startDist = 0, startScale = 1;
+  var lastX = 0, lastY = 0, startTx = 0, startTy = 0;
+
+  function apply(){ img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')'; }
+  function reset(){ scale = 1; tx = 0; ty = 0; apply(); }
+  function open(src){ img.src = src; reset(); lb.classList.add('active'); }
+  function closeLb(){ lb.classList.remove('active'); }
+
+  function clamp(){
+    if (scale <= 1){ tx = 0; ty = 0; return; }
+    var vw = stage.clientWidth, vh = stage.clientHeight;
+    var dispW = img.offsetWidth * scale;
+    var dispH = img.offsetHeight * scale;
+    var maxTx = Math.max(0, (dispW - vw) / 2);
+    var maxTy = Math.max(0, (dispH - vh) / 2);
+    tx = Math.max(-maxTx, Math.min(maxTx, tx));
+    ty = Math.max(-maxTy, Math.min(maxTy, ty));
+  }
+
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if (t.tagName === 'IMG' && t.id !== 'lightbox-img'){ open(t.src); }
+  });
+  close.addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+
+  stage.addEventListener('touchstart', function(e){
+    if (e.touches.length === 2){
+      startDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+      startScale = scale;
+    } else if (e.touches.length === 1 && scale > 1){
+      lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
+      startTx = tx; startTy = ty;
+    }
+  }, {passive:false});
+
+  stage.addEventListener('touchmove', function(e){
+    e.preventDefault();
+    if (e.touches.length === 2){
+      var d = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+      scale = Math.max(1, Math.min(6, startScale * d / startDist));
+      apply();
+    } else if (e.touches.length === 1 && scale > 1){
+      tx = startTx + (e.touches[0].clientX - lastX);
+      ty = startTy + (e.touches[0].clientY - lastY);
+      clamp();
+      apply();
+    }
+  }, {passive:false});
+
+  stage.addEventListener('dblclick', function(){ if (scale > 1) reset(); else { scale = 2.5; apply(); } });
+  stage.addEventListener('wheel', function(e){ e.preventDefault(); scale = Math.max(1, Math.min(6, scale * (e.deltaY < 0 ? 1.12 : 0.9))); apply(); }, {passive:false});
+})();
+</script>
+</body></html>
