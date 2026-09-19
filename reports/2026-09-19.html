@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Crypto 交易员观点日报 · 2026.09.19</title>
+<style>
+:root {
+  --bg: #0a0e17; --surface: #111726; --surface-2: #1a2233; --border: #232d42;
+  --text: #e6eaf2; --muted: #8a94ab; --accent: #f7931a; --green: #38d996;
+  --red: #ff5c6c; --amber: #ffb84d; --purple: #a78bfa;
+  --radius: 14px;
+  --mono: "SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:860px; margin:0 auto; padding:0 24px; }
+a { color:var(--accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+header { padding:56px 0 32px; border-bottom:1px solid var(--border); background:radial-gradient(1200px 400px at 20% -10%,rgba(79,140,255,.15),transparent 60%),radial-gradient(800px 300px at 90% -20%,rgba(56,217,150,.08),transparent 60%); }
+.kicker { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:12px; letter-spacing:2px; color:var(--green); text-transform:uppercase; margin-bottom:16px; }
+.kicker::before { content:""; width:28px; height:1px; background:var(--green); }
+h1 { font-size:clamp(26px,4.5vw,38px); font-weight:700; letter-spacing:-0.02em; line-height:1.2; margin-bottom:10px; }
+h1 a { color:var(--text); }
+.date { font-family:var(--mono); color:var(--muted); font-size:14px; }
+h2 { font-size:20px; font-weight:700; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--text); }
+h3 { font-size:17px; font-weight:600; margin:20px 0 10px; color:var(--text); }
+p { margin-bottom:12px; }
+strong { color:var(--text); font-weight:600; }
+em { color:var(--amber); font-style:normal; }
+blockquote { border-left:3px solid var(--green); padding:8px 18px; margin:14px 0; background:rgba(56,217,150,.05); border-radius:0 8px 8px 0; }
+blockquote p { margin:0; }
+code { font-family:var(--mono); color:var(--purple); font-size:13px; background:rgba(167,139,250,.1); padding:1px 7px; border-radius:5px; }
+ul,ol { padding-left:24px; margin:12px 0; }
+li { margin-bottom:8px; }
+table { width:100%; border-collapse:collapse; margin:16px 0; font-size:14px; }
+th { text-align:left; font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); padding:10px 12px; border-bottom:1px solid var(--border); }
+td { padding:12px; border-bottom:1px solid var(--border); vertical-align:top; }
+tr:last-child td { border-bottom:none; }
+td:first-child { font-weight:600; color:var(--accent); white-space:nowrap; }
+hr { border:none; border-top:1px solid var(--border); margin:28px 0; }
+img { max-width:100%; height:auto; border-radius:10px; margin:12px 0; display:block; }
+footer { padding:40px 0 64px; text-align:center; color:var(--muted); font-size:13px; }
+.back { display:inline-block; margin-top:12px; font-family:var(--mono); font-size:13px; }
+.section { padding:12px 0; }
+@media (max-width:600px){
+  .wrap{padding:0 16px;}
+  header{padding:36px 0 20px;}
+  body{font-size:15px; line-height:1.75;}
+  h1{font-size:24px;}
+  h2{font-size:18px; margin:22px 0 12px;}
+  h3{font-size:16px;}
+  blockquote{padding:6px 14px; margin:12px 0;}
+  ul,ol{padding-left:20px;}
+  td:first-child{white-space:normal;}
+  table{font-size:13px;}
+  td{padding:10px 8px;}
+  img{border-radius:8px; margin:10px 0;}
+}
+.lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:9999; overflow:hidden; }
+.lightbox.active { display:block; }
+.lb-stage { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; overflow:hidden; touch-action:none; }
+.lightbox img { max-width:92%; max-height:92%; border-radius:6px; transform-origin:center center; will-change:transform; }
+.lightbox .hint { position:fixed; bottom:14px; left:0; right:0; text-align:center; color:#8a94ab; font-size:12px; pointer-events:none; z-index:10001; }
+.lb-close { position:fixed; top:12px; right:18px; color:#fff; font-size:30px; line-height:1; cursor:pointer; z-index:10001; padding:6px; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="kicker">Crypto Traders Daily · ktzwei.github.io/crypto-traders-blog</div>
+  <h1><a href="../">Crypto 交易员观点日报 · 2026.09.19</a></h1>
+  <div class="date">2026.09.19</div>
+</div></header>
+<div class="wrap">
+<h1>Crypto 交易员观点日报 · 2026.09.19</h1>
+<blockquote>
+<p><strong>时间窗口</strong>：UTC 2026-09-18 01:00 → 2026-09-19 01:03（约过去 24 小时）
+对应<strong>北京时间</strong>：2026-09-18 09:00 → 2026-09-19 09:03
+<strong>核心事件</strong>：📌 <strong>坏消息一次性砸完，价格却拉出新高</strong>——「加息 25bp（博主口径：三年来首次加息）」「Clarity Act 被否」「CPI」三件事全部落地，BTC 不跌反涨，从 76.2k 一路干到 <strong>81.75k</strong>（+7.3%）。📌 昨天全网盯着的 <strong>76.8k–77.3k 堆叠阻力，被一根 4 小时 K 线直接吃穿</strong>，空头插了三天的旗子（75.0k / 74.8k）一个都没兑现。
+<strong>现价参考（9/19 09:05 BJ）</strong>：BTC <strong>$81,702</strong>（24h 高 81,748 / 低 76,518）｜ETH <strong>$2,625</strong>（24h 高 2,646 / 低 2,446）
+盘面事实：<strong>这是一段「一根 K 线改信仰」的行情</strong>——09-18 20:00–24:00 那根 4 小时，从 78,063 直接推到 81,155，成交 3,497（前一根的 3 倍多），收 80,728；随后 09-19 凌晨 81,407、早上 81,748 连创新高。OKX / 币安 / Coinbase 三家当日最低点集中在 <strong>76,205–76,298</strong>。</p>
+</blockquote>
+<hr />
+<h2>一、今日共识与分歧</h2>
+<p><strong>核心议题：昨天那条「76.8k–77.3k」的线被吃穿了——现在的问题是，这波是「真突破」，还是「82k 之前的最后一冲」？</strong></p>
+<ul>
+<li>🟢 <strong>集体翻多 / 已上车</strong>：tradermatt（<strong>买了现货</strong>，rally base rally）、0xChainMind（<strong>AMD：扫 75K → 扩张到 92K</strong>）、TraderJqrit（<strong>下一步 reclaim 区间 POC</strong>）、Crypto_Scient（<strong>failed breakdown → 上看 $100k</strong>）、XBTkaz（<strong>本地顶在 83–84k</strong>）、shinigamiXBT（<strong>底部 SFP → 这波是「easiest trade in a while」</strong>）、Osbrah（<strong>底已现，不会再见 6 万下方</strong>）</li>
+<li>🔴 <strong>逆势 / 收手观望</strong>：astronomer_zero（<strong>反手加空到 1.5x，回撤 6–7%</strong>，今早 81.3k 空单平价离场）、Stefan_B_Trades（<strong>81.6k 是 bus stop，找局部顶；周一来之前不动手</strong>）、SailorManCrypto（<strong>「在阻力做多？这是我必须再喊一次的事」</strong>）、crptAtlas（<strong>转发链清一色偏空</strong>）</li>
+<li>⚪ <strong>只做框架不表态</strong>：market_beggar（<strong>「交易的本质是规划而不是预测」+ 四套路径预案</strong>）、tradermatt 的「两套剧本我都留着」（日内已转多）</li>
+</ul>
+<p><strong>共识（多人同向）：</strong>
+1. <strong>76.8k–77.3k 从「阻力」变成「地板」</strong>——昨天的四个动作（Stefan 的空点、Raizel 的空单、SailorMan 的转多开关、tradermatt 的观察位）今天全部被价格从下往上穿过。<strong>这条被吃穿的线，本身就是今天最大的信息：原本的卖家不在这个价位了。</strong>
+2. <strong>「利空不跌」被升级成「利空上涨」</strong>：tradermatt 原话——「<strong>比特币没有在 Clarity Act 失败、CPI 或 FOMC 之后跌破；这让我想起上一轮的硅谷银行</strong>」；Ansem——「<strong>你根本拿不到更低的价格了</strong>，在股市走抛物线、行业情绪最差的时候，crypto 交出了历史上最差的跨资产相对表现，然后见底」；Osbrah——「<strong>加息，而所有东西都在涨</strong>」。
+3. <strong>周末共识 = 不动手</strong>：Stefan「<strong>周一开始再干，让周线收盘</strong>」、Raizel「<strong>周末后再交易，目前还没看到弱势</strong>」、trader_maxey「<strong>周末不要指望有什么波动</strong>」、astronomer_zero「<strong>等周末高点被拿走再进第二笔空</strong>」。
+4. <strong>山寨强于大饼这件事已经被所有人看见</strong>：Moe 的「Others 开始跑赢 BTC」、Scient 的 USDT.D 破位看 5.87%、trader_maxey 的「山寨季这个位置即使不破也会逐步走强」——<strong>和昨天的判断一致，只是今天多了一个证据：ETH 是突破的领跑者。</strong></p>
+<p><strong>今天最值得留意的一条：翻多的都是「执行力派」，逆势的都是「结构派」。</strong> tradermatt、Jqrit、shinigami 是在价格行为确认之后才动手（延续 / SFP / POC 收复）；而 astro、Stefan、SailorMan 逆的是「HTF 阻力 / 周线未收 / 区间上沿」这些还没被推翻的结构。<strong>这不是谁对谁错，是时间尺度不同——一个赌当下，一个赌周线。周线收盘前，两边都还没被证伪。</strong></p>
+<hr />
+<h2>二、BTC 关键位与操作</h2>
+<blockquote>
+<p>一句话定调：<strong>昨天的主题是「等这条线破」，今天这条线破了，主题变成「破完之后谁先认」——市场用一根 4 小时 K 线完成了方向选择，剩下的分歧只在「这是起点还是终点」。</strong></p>
+</blockquote>
+<h3>🟢 tradermatt——从「缩量磨顶」到「买现货」：rally base rally</h3>
+<ul>
+<li><strong>全天最重要的态度切换</strong>。09-18 22:21 他还在说「<strong>比特币没有在 Clarity Act 失败、CPI、FOMC 上跌破，让我想起上一轮的硅谷银行——如果 H4 这样收盘，我就买</strong>」；到 09-19 00:30 直接执行：「<strong>bitcoin h4，我买了现货。这是一个教科书级的 A+ 做多延续形态：rally base rally</strong>（上涨—横盘—再上涨）<strong>。我甚至把它放进过我的 YouTube 封面，就是这么教科书。</strong>」</li>
+<li>他给出的<strong>入场理由链</strong>值得抄：「<strong>尽管还没突破上方结构，我也无法忽视它的强度——低点假破 + 向上的力度，对我的系统来说是 A+ 信号；而且它一路在甩掉坏消息，而这些坏消息本来有巨大潜力把它打下去。</strong>」</li>
+<li>一条经验型的仓位理由（<strong>不是技术信号，是生活信号</strong>）：「<strong>今晚我要去度假，不想接下来几周一直担心比特币，这是我这笔现货的最大原因之一</strong>」——并明确「<strong>我有止损，以防我买在了顶部</strong>」，以及「<strong>别抄我，我用的模拟盘</strong>」。</li>
+<li><strong>他今天第二个可复用的观察</strong>：把 <strong>BTC 现在 H4</strong> 和 <strong>ETH 2025 年 6 月的日线</strong>叠在一起——「<strong>相似的推升、低点假破、然后创新高再延续</strong>」。</li>
+</ul>
+<p><img alt="tradermatt：BTC H4 —— rally base rally，我买了现货" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100985862938906677_20.jpg" />
+<img alt="tradermatt：BTC 没在坏消息上跌破，如果 H4 这样收盘我就买" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100953353110839425_19.jpg" />
+<img alt="tradermatt：BTC H4 现在 vs ETH 2025 年 6 月日线" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100995324978340222_22.jpg" /></p>
+<blockquote>
+<p>⚠️ 注意他是<strong>先画区间再跟突破</strong>的打法：「<strong>等价格在关键位形成区间，然后跟随突破</strong>」——这个区间在 09-18 19:42 时他还写成「<strong>倾向反转、走成 82k 那种『破低—最后冲一下—再跌』</strong>」，最终是坏消息不跌把他推到多头一侧。</p>
+</blockquote>
+<hr />
+<h3>🔴 astronomer_zero——今天最完整的「扛单教科书」：加空到 1.5x，回撤 6–7%</h3>
+<ul>
+<li><strong>他是唯一公开站在对立面的人，也是今天最有价值的一份实盘样本。</strong> 时间线：</li>
+<li>09-18 13:05：<strong>0.5 倍杠杆起手</strong>，「继续看新低，我会在亚洲/伦敦时段之后加仓」。</li>
+<li>09-18 19:10（伦敦收盘）：<strong>按计划三倍加仓到 1.5 倍</strong>，「现在到下一个 POI，我认为会开始被拒绝。<strong>理由：红色九月、OHLC 防守、FOMC 看跌反转、以及一路延续到 74.8k 低点的长期多头流动性。</strong>」</li>
+<li>09-19 04:10：价格反向走了 4%，<strong>他不但没平，反而又开了一笔 0.9 倍的新空</strong>——「<strong>账户回撤 6–7%。这不有趣，但评估后我不认为这是灾难性的……我信念里的 74.8k 目标依然非常高。</strong>」</li>
+<li><strong>他给出的「扛单 vs 翻多」的判断框架，比方向本身值钱</strong>：当持仓错了但偏见没变时，<strong>调整执行而不是调整偏见</strong>——「<strong>不平掉、不全仓做多、也不平掉离场保持空仓，因为这三个动作都含有『切换偏见』的意味。对我来说，正确的动作是：就在这里、用更低的杠杆，开一笔新的空。</strong>」</li>
+<li><strong>他还写清了容忍上限</strong>：「<strong>最大痛苦大约 10%，也就是价格到达 9 月 HTF 失效位的时候——那是我舒服的止损线，到那儿我就不再做空。</strong>」</li>
+<li>今早 08:56 更新：<strong>81.3k 那笔空单平价离场</strong>，「<strong>目前持有 1.5 倍下方仓位。不喜欢它周末去摸高点，所以等周末高点被拿走之后再进第二笔空。</strong>」</li>
+</ul>
+<p><img alt="astronomer_zero：伦敦收盘，按计划把空头加到 1.5 倍" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100905412036108388_46.jpg" />
+<img alt="astronomer_zero：反向 4%，不减仓反而新开一笔 0.9x 空" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2101041293652820387_47.jpg" />
+<img alt="astronomer_zero：81.3k 空单平价离场，等周末高点被拿走后加空" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2101113103320490392_50.jpg" /></p>
+<blockquote>
+<p>📌 <strong>对看多的人来说，这是最好的反向清单</strong>：如果「红色九月 + OHLC 防守 + 74.8k 流动性」这套逻辑最终失效，他会是第一个认输的人——<strong>他的 10% 回撤线，就是多头这波的风险刻度尺</strong>。</p>
+</blockquote>
+<hr />
+<h3>🟢 0xChainMind——从「75K 必须先扫」到「扫完看 92K」：AMD 模型</h3>
+<ul>
+<li><strong>他昨天的立场是「任何反转之前 75K 必须先被扫掉」，今天扫完了，他就把话头接了上去</strong>：</li>
+<li>09-18 23:33：「<strong>一切按计划走。最近这波回踩到 75K，正好是 Wyckoff 说的那样。下一步应该看到 SOS（强势信号）区再次拿下上方流动性，然后再横盘约 4 周。之后就是 only up。</strong>」</li>
+<li>09-19 01:59：「<strong>$BTC 正在走一个清晰的 AMD 模型（吸筹—洗盘—拉升）：扫掉 75K → 扩张到 92K。记住我的话。</strong>」</li>
+<li><strong>同一天他还挂了一张完全不同的单子</strong>（09-18 16:45）：<strong>「这会是我最干净的波段多单：70K 入场，目标 100K，失效 67K，全程公开记录。」</strong>——注意这不是矛盾，是<strong>两手准备</strong>：一手接突破延续，一手接深度回踩。</li>
+<li>他唯一坚持的谨慎点是波动率：<strong>「DVOL 一直在被压回多年低位，这种压缩从来不会持久，而且永远猛烈均值回归——回归的时候，整段行情会以一次巨大的流动性扫荡的形式出现。」</strong></li>
+</ul>
+<blockquote>
+<p>📌 他这两条内容都是视频形式，无图可配（本期只抓 photo 媒体）。</p>
+</blockquote>
+<hr />
+<h3>🟢 Crypto_Scient——「75.5k 被扫掉之后，最可能的路径是向上到 $100k」</h3>
+<ul>
+<li><strong>他最完整的一段口径在 09-18 17:37</strong>（正好在放量之前）：<strong>「$BTC 去扫了 75.5k 的低点。我没能参与那次偏离做多，但考虑到这是一次失败的向下破位，从这里最可能的路径是向上，到 $100k。等一根好的日线收在 $81k 上方，我会尝试一笔突破多单。」</strong></li>
+<li><strong>同时他给了交易者一条关于「为什么你总是在错误的位置买卖」的直白解释</strong>：「<strong>人们不敢在支撑买，因为支撑出现在无聊的下跌日，恐惧让他们觉得还会继续破位；反过来，人们急于在阻力买，因为害怕错过支撑没买到的机会。聪明钱的流动性就是这么被建出来的。</strong>」</li>
+<li>现货成绩单：<strong>NEAR 全平，81% 行情、16R</strong>，「我在 $2 以下喊得最大声，现在不是了」；<strong>ZEC 已经进入价格发现</strong>，若 11 月回踩前高 $800 一带他会做波段，<strong>抛物线顶看到 $5k+</strong>；<strong>SOL 再上一腿看 $130</strong>，到位减 50% 现货、$90 附近补回；另外在跟踪 <strong>XPL、FARTCOIN、SPX6900、UNI</strong>。</li>
+<li><strong>USDT.D 是他给的宏观弹药</strong>：8 个月区间破位 + 一个月在支撑下方震荡把 RL 翻成阻力，<strong>下一次 BTC 冲动会把它送到 5.87%</strong>。</li>
+</ul>
+<p><img alt="Crypto_Scient：75.5k 被扫 → 最可能路径向上到 $100k" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100881875971735914_13.jpg" />
+<img alt="Crypto_Scient：NEAR 全平 —— 81% 行情、16R" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100796295074246986_6.jpg" />
+<img alt="Crypto_Scient：USDT.D 破位，下一波冲动看 5.87%" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2101049363065978995_17.jpg" /></p>
+<hr />
+<h3>🟢 XBTkaz——剧本从头到尾没改过：先 83–84k 造顶，再回 73–74k 大清洗</h3>
+<ul>
+<li>09-18 22:11：<strong>「行吧行吧——14–16 号那个 pivot（枢轴）完美兑现了（我们在黄点形成了局部底）。接下来看 83–84k 附近的局部顶形态。」</strong></li>
+<li>这已经是他 9/15 以来的同一套剧本，<strong>今天唯一的变化是：价格开始兑现他的第一步</strong>。他昨天在 16:05 就把话说完了：<strong>「价格接下来往哪走，对每个人来说都很明显；但他们还是会一路空这个反弹，直到顶部，然后在该做空的时候翻多。我们先上去猎取流动性，然后再去 73–74k。到 83–84k 只是时间问题。」</strong></li>
+</ul>
+<p><img alt="XBTkaz：14–16 号 pivot 完美兑现，下一站 83–84k 局部顶" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100950902941368489_44.jpg" />
+<img alt="XBTkaz：先去猎取上方流动性，再回 73–74k" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100858839990153526_43.jpg" /></p>
+<hr />
+<h3>🔴 Stefan_B_Trades——「81.6k 是个公交站」：一边落袋，一边等做空机会</h3>
+<ul>
+<li><strong>他在收盘前把话说得极清楚（09-18 21:51）</strong>：「<strong>81.6k 应该够用了——作为一个『公交站』，价格在这里找到局部顶。</strong>」随后 21:54：<strong>「现在不是该转多的时候。这就是我为什么提前落袋（部分仓）并退出——付钱给交易员。我们进入了区间高点：pWH（上周高）和 pMH（上月高）。有可能再次被拒绝，如果市场真的这么强，我会再尝试一次波段空。」</strong></li>
+<li><strong>执行面（这才是重点）</strong>：「<strong>周一之前不再交易，让周线 K 线收完。</strong>」仓位只剩 <strong>CYS、SUI 的部分止盈</strong>，另外 <strong>KAS 的 0.032 TP 精准打到</strong>（09-18 15:43），现货 <strong>BEAMX、AR</strong> 开始跑动，<strong>ZEC 的「漂亮的空」正在加载</strong>。</li>
+<li><strong>他今天发的最长一篇是对山寨的祛魅</strong>（09-18 18:41）：<strong>「为什么我持有比这里多数人更大的山寨仓位，却不参与叙事狂欢？因为我见过这个环境翻转得有多快、被操纵得多容易，也见过当你不再用『赢家』来衡量时的真实表现。</strong> 有些山寨会跑出来，这是真的；但那少数几个远远不够覆盖过程中被抽走的部分。<strong>meme 狂热、Telegram 拉盘、发射台赌场、有组织的出货——这不是这个行业的副作用，这就是它的商业模式。</strong>」</li>
+<li>另一篇「为什么做空比做多难」的分享里，有一句可以直接抄的纪律定义：<strong>「现货多头人群经常根本没有失效位——你问这个想法什么时候算错，他们答不出来，因为答案就是爆仓价。那不是策略，那是把交易所的风控引擎当成自己的用。」</strong></li>
+</ul>
+<p><img alt="Stefan：81.6k 是个公交站，价格在这里找局部顶" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100945791825084856_111.jpg" />
+<img alt="Stefan：现在不是转多的时候 —— 我们进入区间高点 pWH / pMH" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100946467561112044_112.jpg" />
+<img alt="Stefan：ZEC 的漂亮空单正在加载" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100849671233024419_103.png" />
+<img alt="Stefan：他们想去打上周高点" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100882941400231938_108.jpg" /></p>
+<hr />
+<h3>🟢 TraderJqrit——空单已了，目光转向「区间 POC 收复」</h3>
+<ul>
+<li>09-19 01:18 更新：<strong>「$BTC 更新：未测试的需求区 ✔️ ｜ 区间低点流动性 ✔️ ｜ 下一步收复区间 POC？」</strong>——<strong>从 9/17 的「空单成交、找新低」，到今天的「看 POC 收复」，方向已经换了边。</strong></li>
+<li>窗口内其余内容是 prop firm 招募（breakoutprop 单月 718 万美元出金），<strong>没有新的品种仓位说明</strong>。</li>
+</ul>
+<hr />
+<h3>⚪ Raizelxbt——日内多空反复切换：头皮多、头皮空、然后「减仓或砍」</h3>
+<ul>
+<li><strong>提前量给得最准的人</strong>：09-18 17:15 与 19:25 两次 <strong>ETH TP 落袋</strong>，21:49 还自嘲「<strong>我觉得我止盈太早了</strong>」——随后 ETH 一路走强。</li>
+<li><strong>BTC 上是紧贴节奏的日内操作</strong>：21:41「<strong>兑现了</strong>」→ 21:49「<strong>没有破位就不做空，趋势是你的朋友</strong>」→ 22:30「<strong>试一笔高风险空</strong>」（做在 80k 上方）→ 09-19 04:28「<strong>在这里降风险，或者可以砍掉。周末之后再做，目前还没看到弱势</strong>」→ 04:52「<strong>在等更多区间/回撤，下一步看 VAH 下方的 reclaim 到 VAL</strong>」。</li>
+<li>心态那一句可以留：<strong>「别只截屏你的盈利，也落袋一些。把市场给你的东西先锁定下来。」</strong></li>
+</ul>
+<p><img alt="Raizelxbt：试一笔高风险空（BTC）" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100955716463075812_40.jpg" />
+<img alt="Raizelxbt：在这里降风险，或直接砍；周末后再交易" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2101045725471883705_41.jpg" /></p>
+<hr />
+<h3>🔴 SailorManCrypto——「在阻力看多？这是我必须再喊一次的职责」</h3>
+<ul>
+<li>他放出了那句熟悉的讽刺图（09-18 21:56）：<strong>「Bullish at resistance? BTC」</strong>——<strong>这正好是在放量突破的同一刻，他是全场对多头最不客气的一个人</strong>。</li>
+<li>跨境品种上他今天全是执行层面的干货：</li>
+<li><strong>SPX</strong>：「又一个位移开盘。理想情况我想在通道上轨约 <strong>3R</strong> 止盈，止损在 4H 趋势的狙击入场后已经可以放到平保。」</li>
+<li><strong>WTI 原油</strong>：「夜间继续下探，我们到了 <strong>PoC</strong>，这是一个在 <strong>2R</strong> 锁一部分利润的好位置，止损已经可以打平——这是一次很漂亮的狙击入场。」</li>
+<li>昨天那条关于节奏的总结今天依然成立：<strong>「周一等区间形成，只观察；周二是 Clarity Act 投票，现金为王；FOMC 不碰，波动太大；周四才是真正可以交易的时候。」</strong></li>
+<li>一句吐槽，正好点破这两天的市场：<strong>「CT（Crypto Twitter）永远快一步：在阻力看多、在支撑看空。」</strong></li>
+</ul>
+<p><img alt="SailorManCrypto：在阻力看多？（BTC）" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100947033766912291_75.png" /></p>
+<hr />
+<h2>三、山寨 / 中长线与中文交易员</h2>
+<h3>🟢 Crypto_Moe84——「Altseason 的五个阶段，我们在第 3 阶段起点」</h3>
+<ul>
+<li><strong>他今天给了一张「周期地图」</strong>，这是他这一轮最清楚的一段表达：<blockquote>
+<p><strong>1）BTC 跑赢 ETH —— 已完成（历史）</strong>
+<strong>2）ETH 跑赢 BTC —— 已完成，进行中</strong>
+<strong>3）$OTHERS 跑赢 BTC —— 开始出现早期迹象，ALTSEASON</strong>
+<strong>4）Others 跑赢 ETH —— ALTSEASON MAX</strong>
+<strong>5）退休</strong>
+<strong>「我们在第 3 阶段的起点 / 正在过渡进第 3 阶段。」</strong></p>
+</blockquote>
+</li>
+<li>配套证据链：<strong>BTC/GOLD</strong>（「我告诉过你这条线撑不住」）、<strong>USDT.D</strong>（「看涨成交量在阻力处枯竭，现在你看，看跌成交量开始变强——这里就是熊市的起点」，并配「Continuation…」）、<strong>$Others</strong>（「如果这张图吓到你，你有大问题」）、<strong>PEPE</strong>（「价格行为非常干净，月线下影线似乎做完了，100% 的拉升正在这里加载」）、<strong>ETH</strong>（「如果 ETH 在 2026 年创新高，我不会惊讶」，并问「ETH 领涨突破？BTC 会跟上吗？」）。</li>
+<li><strong>他今天说得最难听、也最值得记的一句</strong>：<strong>「任何人都可能错，尤其你玩 MTF/LTF 的时候——这不是问题。但在 HTF 支撑处看空，是个巨大的问题。」</strong></li>
+<li>纪律提醒照旧：<strong>「未来几个月小心乱点链接，会有很多『黑手党』盯着你的 altseason 钱」</strong>；并声明只分享图表和观点、不给投资建议。</li>
+</ul>
+<p><img alt="Moe：$USDT.D —— 看跌成交量开始变强" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2101066995085054153_65.jpg" />
+<img alt="Moe：$Others —— 如果这张图吓到你，你有大问题" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2101071852214894675_67.png" />
+<img alt="Moe：BTC.D / Others / Others-ETH 三张图串起周期阶段" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2101088428293001413_70.png" />
+<img alt="Moe：ETH 领涨突破？BTC 会跟上吗" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2101092119750594959_71.png" /></p>
+<p>⛔ 参考方式：他没有止损、没有失效位，只当<strong>大周期背景</strong>读。</p>
+<hr />
+<h3>🟢 trader_maxey——「95000 的比特币即将到来」</h3>
+<ul>
+<li><strong>中文交易员里喊得最直接的一位</strong>：09-18 21:56 发图「<strong>95000 的比特币即将到来</strong>」；22:33 复盘——「<strong>回老家忙了一周，回来重新建仓币圈，没想到还是赚到钱了。大家永远不要害怕错过，只要本金还在，市场里的机会就不会消失。</strong>」</li>
+<li><strong>他这段话里最有价值的是那句对宏观框架的怀疑</strong>：<strong>「我个人目前比较关注的是，这一轮宏观周期是否还能够简单沿用过去的加息/降息逻辑……</strong> 一方面 AI 的持续突破和大规模商业化落地，可能对生产率、资本开支、企业盈利以及通胀结构产生深远影响；另一方面美债规模、财政赤字以及利率水平之间的矛盾，也可能使未来的货币政策和流动性环境变得更复杂。<strong>所以对我来说，比预测每一轮行情更重要的，还是控制仓位、管理风险、保住本金、顺势而为。</strong>」</li>
+<li>23:45：<strong>「今晚的多头仓位止盈结束了，睡觉啦，周末不要期望有什么波动。」</strong></li>
+</ul>
+<p><img alt="trader_maxey：95000 的比特币即将到来" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100947191426961445_57.png" /></p>
+<hr />
+<h3>🟢 blknoiz06（Ansem）——「你根本拿不到更低的价格」</h3>
+<ul>
+<li><strong>他的核心论点（09-18 22:40）</strong>：<strong>「你不会再有更低的入场价了。我们在股市走出抛物线、行业公开情绪处于多年最差的时候，交出了 crypto 历史上最差的跨资产相对表现，然后见了底。</strong> 等四年周期底部的老 OG 接下来会追这波行情；<strong>对想分散敞口的 tradfi 来说，crypto 现在开始像一个很有吸引力的动量交易；对长期配置来说，则是对美国财政不负责任的天然对冲。</strong>」</li>
+<li>短句连击：<strong>「nothing stops this train」</strong>（什么都拦不住这班车）、<strong>「god the charts look like sex」</strong>、<strong>「crypto is fun again」</strong>、<strong>「we are going to make so much money」</strong>；并转发了 Tradermayne 的<strong>「场外站着是一种选择。如果你觉得底已经到了，就买；做一个拿到敞口的计划，然后执行它。」</strong></li>
+<li><strong>他唯一认真的长文是关于发射台赛道</strong>：「<strong>这个游戏根本没被解决</strong>——《如何甄别并找到真正能长期跑出来的币》」，他在看的四类：<strong>RWA + 代币化股票协议、移动端投机与 meme、奖励长期一致的发射台、能从链上活跃度中捕获价值的产品</strong>。</li>
+<li>昨日监管线延续：<strong>代币化美股（SEC 五年创新豁免）、CFTC 对链上 DeFi 软件不采取行动</strong>——他认为「<strong>监管环境对加密的变化是巨大的</strong>」。</li>
+</ul>
+<hr />
+<h3>⚪ cluec3——ZEC 和 HYPE 不能相提并论（今天最好的「拒绝追高」样本）</h3>
+<ul>
+<li><strong>他的论证方式比结论更值得学</strong>：<strong>「所有人都在告诉你 ZEC 上涨是因为隐私叙事。但最有意思的问题是：ZEC 是第一天做隐私吗？以前你们不知道 ZEC 是隐私币吗？如果隐私叙事本身就是上涨的答案，它为什么半年前不涨、一年前不涨，偏偏现在涨？</strong>」</li>
+<li>结论两句，一句是方法论，一句是风险：<strong>「很多所谓的上涨逻辑，其实都是价格涨完以后，市场再回过头给它找一个合理的故事。」</strong>「<strong>ZEC 现阶段我更愿意把它当成一轮轧空行情——当然还可以继续涨，但短时间已经涨了这么多以后再进去，和几个月前买入，本质上已经不是同一笔交易了。别拿上涨以后才出现的故事，去合理化自己的追高。</strong>」</li>
+<li>对照标的：<strong>HYPE 是平台币逻辑</strong>——「背后是持续产生交易量、手续费、用户和生态的 Hyperliquid，<strong>手续费回购、代币销毁、质押、生态扩张</strong>都会直接传导到 HYPE，所以我更愿意当长期标的去研究。」</li>
+</ul>
+<p><img alt="cluec3：不要把 ZEC 和 HYPE 相提并论" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100930762145190325_4.jpg" /></p>
+<hr />
+<h3>⚪ market_beggar（貝格先生）——「交易的本质是规划，而不是预测」</h3>
+<ul>
+<li><strong>他给的不是观点，是一套预案模板</strong>：把 2023 年初的筑底结构拆成「<strong>向上 Stop Hunt（给大级别回调一个完美借口）→ 回调填补下方真空失衡区 → 同时向下 Stop Hunt（大级别回调到位的信号）→ 上涨开始</strong>」，然后<strong>直接把问题交回给读者</strong>：<blockquote>
+<p>🔺 如果接下来先向上 Stop Hunt，你的策略是？（高空 / 低多 / 其他）
+🔺 如果没有向上 Stop Hunt 而直接回调，你的策略是？
+🔺 如果大级别回调出现，你的入场依据和止损依据是？
+🔺 如果直接一路上攻不回调，你的策略是？</p>
+</blockquote>
+</li>
+<li>他一贯的立场是反「刻舟求剑」：<strong>「歷史不會重演，但總是押韻。刻舟求劍沒有意義——我們不能直接說『現在就該和 2023 的跑法一樣』，但那個築底過程的確合理，且存在值得借鑑之處。」</strong></li>
+<li>昨日他还给了 BTC 区间低点 <strong>75.6K 已形成 Equal Lows（等低）→ 存在 Liq 引力，被清扫的概率大幅上升</strong>——<strong>这一点今天已经被兑现（区间低点被扫）。</strong></li>
+</ul>
+<p><img alt="market_beggar：如果給你抄一次 2023 年的答案，你的策略是？" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100763188870738052_95.jpg" /></p>
+<hr />
+<h3>🔴 crptAtlas——立场还是空的，但今天他爆了两个更硬的东西</h3>
+<ul>
+<li><strong>立场上他一整窗没有变</strong>：转发链清一色的偏空素材——<strong>ChainMind 的 DVOL 压缩、DeFiMidas 的「BTC 正在重复 5 月暴跌模式」、cryptosymbiiote 的「现在很可能再去扫 82K 区间高点」</strong>。<strong>读他的转发即立场：偏空。</strong></li>
+<li><strong>但他今天真正的产出是两件风险提示（和方向无关，纯风控）</strong>：
+  1. <strong>Robinhood 的 $WALLET 代币被 rug</strong>：<strong>「它借着 Robinhood 的名字在拉盘，然后 Robinhood Wallet 开始警告用户：它不背书也不验证任何声称与其相关的代币。$84M → $2.7M，1 小时 -96%。</strong> 链上所有其他借着 Robinhood 名字交易的代币都收到了同样的警告。」
+  2. <strong>FOMO 交易 App 的默认滑点 45%</strong>：<strong>「这个 App 的默认滑点是 45%，而且没有设置能改。所以你每一次买、每一次卖，都可能被前置跑掉最多 45%，双向都是。</strong> 这还不算 2% 的手续费。反过来想——<strong>同一个 45% 的窗口，对任何在另一侧跑机器人的人都是敞开的。</strong>」</li>
+</ul>
+<p><img alt="crptAtlas：Robinhood 的 $WALLET 被 rug，1 小时 -96%" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2101112475244773677_99.png" />
+<img alt="crptAtlas：FOMO App 默认滑点 45%，无法更改" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2101001046663614732_96.jpg" /></p>
+<hr />
+<h3>⚪ 其余有观点的中文 / 教育向博主</h3>
+<ul>
+<li><strong>shinigamiXBT</strong>——<strong>「这波是最近最轻松的一笔交易。」</strong> 他说底部 SFP 的触发条件<strong>已经连续 3 周在每场公开直播里讲过了</strong>；并预告 9/20 免费公开课：「<strong>20 号我不给你看入场，我给你看『我读行情的顺序』——而这个顺序就是全部的 edge。</strong>」 另一条更狠的：「<strong>你们今年亏钱，大多数不是因为你的 setup 失效了，而是市场变了、你的 setup 没变。</strong>」</li>
+<li><strong>48Kchunbai</strong>——只发了两句态度：<strong>「满时间线都是各种博主各种 BTC 的分析，有意思么？」</strong> 以及关于「交易员如何通过做好的交易实现自我成长」的内容。<strong>无仓位观点。</strong></li>
+<li><strong>Luckshuryy</strong>——一句话，但是今天最贵的一句：<strong>「『把止损移到平保』并不是你以为的那种炫耀。」</strong> 他此前的主张是：<strong>围绕期望值做所有决定、只做比特币一个品种、半仓直到走对了再加、以及在没有盈利前先审计自己的执行而不是盈亏。</strong></li>
+<li><strong>rahmath369</strong>——<strong>「今天收红。不报复性交易、不强求 setup、不做情绪化决定。接受亏损、从中学习、继续走。1/1L。」</strong> 这张心态贴纸本身就是纪律样本：<strong>亏了就记下来，然后收工。</strong></li>
+<li><strong>OwaisAlpha1</strong>——<strong>撤掉了限价单：「价格已经跑了 +3R，根本没回踩到我的入场。运气不好，下一次再抓。」</strong>——他仍然只做「能一句话说清什么会让我错」的机会。</li>
+<li><strong>nekofrize（Eureka）</strong>——<strong>窗口内只有一条自我定位的说明</strong>：以后基本只发交易垂直内容，偶尔会有旅行笔记与生活碎想。</li>
+</ul>
+<p><img alt="shinigamiXBT：最近最轻松的一笔交易 —— 底部 SFP" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100999422435836085_26.png" />
+<img alt="rahmath369：今天收红，不报复性交易，1/1L" src="https://img.ktzwei.top/crypto-traders/2026-09-19/2100979646301143545_117.jpg" /></p>
+<hr />
+<h2>四、低产 / 无观点博主（全覆盖检查）</h2>
+<table>
+<thead>
+<tr>
+<th>博主</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LH_btc</strong></td>
+<td><strong>持续休眠</strong>：库里最后推文停在 <strong>9/11</strong>（CME 缺口观察：「<strong>76k 已拿掉 ✅，接下来看 80k 平开或者 70k 下方缺口</strong>」），本窗口、以及本次抓取的 20 条里都无新内容</td>
+</tr>
+<tr>
+<td><strong>MinaraCN</strong></td>
+<td>纯产品内容：MRVL 研究演示、接入 Robinhood 资产数据与现货交易、A2A 经济 meetup、KBW 首尔活动。<strong>无交易观点</strong></td>
+</tr>
+<tr>
+<td><strong>Osbrah</strong></td>
+<td>仓位观点只有一句但很硬：<strong>「仍然认为底已经在了，短期内不会见到 6 万下方。」</strong> 另加一句现象观察：「<strong>加息，而所有东西都在涨</strong>」——其余是直播与折扣推广</td>
+</tr>
+<tr>
+<td><strong>nekofrize（Eureka）</strong></td>
+<td>窗口内 2 条：1 条转发、1 条账号定位说明。<strong>无市场观点</strong></td>
+</tr>
+<tr>
+<td><strong>cluec3</strong></td>
+<td>窗口内 1 条长文（ZEC vs HYPE，见上）；其余为直播与长文交流。<strong>无价格观点</strong></td>
+</tr>
+<tr>
+<td><strong>茶不思 @mdzzi</strong></td>
+<td><strong>不在本次 list 成员返回中</strong>（库内仍在）：最后推文 9/17 23:02（「三根大阳线，打爆所有偏见」，指美股持仓），<strong>窗口内无推文</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>覆盖统计</strong>：本窗口 list 共 <strong>24 位博主全部检查</strong>，其中 <strong>23 位有窗口内推文</strong>（LH_btc 为持续休眠）；另查库内已不在 list 成员的 mdzzi，窗口内无推文。窗口内推文 <strong>163 条</strong>（Moe、Ansem 等高产博主按每人 20 条上限采集）。</p>
+<hr />
+<h2>五、市场情绪温度计 🌡️</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>读数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多空比</td>
+<td>🟢 <strong>明显偏多（且是「翻多」而非「一直多」）</strong></td>
+<td>多头里有 tradermatt（昨天还在等破位）、ChainMind（昨天还在喊 75K 必须先扫）、Jqrit（前一天的空单）、Scient、Kaz、shinigami——<strong>立场切换的数量，比立场本身更能说明力度</strong></td>
+</tr>
+<tr>
+<td>逆势方</td>
+<td>🔴 <strong>只剩结构派 + 周末收工派</strong></td>
+<td>astronomer_zero（1.5x 空、回撤 6–7%、容忍上限 10%）、Stefan（81.6k 公交站、周一前不动手）、SailorMan（「在阻力看多？」）、crptAtlas（转发偏空）</td>
+</tr>
+<tr>
+<td>关键上沿</td>
+<td><strong>81.6k → 82k → 83–84k → 92k → 100k</strong></td>
+<td>Stefan 的公交站、tradermatt 提的 82k 假突破形态、Kaz 的 83–84k 局部顶、ChainMind 的 AMD 目标 92k、ChainMind 的 100k / Scient 的 100k</td>
+</tr>
+<tr>
+<td>关键下沿</td>
+<td><strong>80.9k → 78.1k → 76.5k → 75.5k（已扫）→ 74.8k</strong></td>
+<td>今天的 4H 起点 78,063、前一根 4H 收盘 80,728、昨日区间低点 76,205–76,298（已扫）、astro 的 74.8k 旗子仍未兑现</td>
+</tr>
+<tr>
+<td>盘面事实</td>
+<td>09-18 20:00–24:00 单根 4H <strong>+3.9%</strong>，成交 <strong>3,497</strong>（前一根 3 倍）；现价 <strong>81,702</strong>，24h <strong>+5.4%</strong></td>
+<td>ETH 同步：2,446 → 2,646，<strong>+7.4%</strong>，且 Moe 明说「ETH 在领涨突破」</td>
+</tr>
+<tr>
+<td>主流动作</td>
+<td>🧘 <strong>周末降速 / 等下周一</strong></td>
+<td>Stefan「周一开始再干」、Raizel「周末后交易」、maxey「周末别指望波动」、astro「等周末高点被拿走」、tradermatt「去度假」</td>
+</tr>
+<tr>
+<td>周线状态</td>
+<td>⚠️ <strong>未收</strong></td>
+<td>Stefan 把「周线收盘」当成翻多的前置条件；astro 的整个空头偏见也建立在「9 月 HTF 未失效」上——<strong>周末的收盘价是两边共同的裁判</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>六、给交易者的一句话</h2>
+<blockquote>
+<p><strong>今天最值钱的信息不是「谁看对了」，而是「翻多的人当初是在什么条件下才动手的」。</strong> tradermatt 等了「H4 这样收盘」，ChainMind 等了「75K 被扫掉」，Scient 等「日线站上 81k」，Kaz 等「pivot 兑现」，Jqrit 等「需求区被测试」。<strong>五个人等的是不同的信号，但都等到了才动手——这就是所谓「执行力派」的全部秘密：不是预测得准，是触发条件写死了。</strong></p>
+<p>三个可以直接抄的观察点：</p>
+<p>① <strong>把 astro 的回撤线当成多头的风险刻度尺</strong>：他公开写着「<strong>最大痛苦 ~10%，到 9 月 HTF 失效位就不再做空</strong>」。<strong>如果他真的在这里认输，那大概率就是这波的加速段；如果他还在这个区间反复加空，说明 82k 上方的供给还没消化完。</strong> 一个人公开的止损，就是全市场的路标。</p>
+<p>② <strong>今天真正被推翻的不是价格，是一个假设</strong>：「坏消息 → 下跌」这条链路在 Clarity Act、CPI、FOMC 三连之后失效了（tradermatt、Ansem、Osbrah 都指出这一点）。<strong>接下来要盯的反而是它的反面：如果连「好逻辑 + 利好」都推不动价格，就该怀疑这波的性质了。</strong> 本周的射程就在 81.6k→83–84k 这条空头密集带上，<strong>83–84k 是 Kaz 的局部顶、也是市场公认的「最后一追」区</strong>。</p>
+<p>③ <strong>周末不是交易日，是作弊日</strong>：连续 4 位博主说周末不动手，而 trader_maxey 直接说「<strong>周末不要指望有什么波动</strong>」。<strong>你要做的只有一件事：把下周的计划写出来，把 76.5k / 78.1k / 81.6k / 83–84k 四条线画在图上，然后等周线收盘。</strong> 昨天那份报告说「今天不是下注的日子，是画线的日子」——今天画完线了，价格自己给出了答案，<strong>下周一才是真正要动手的时候。</strong></p>
+<p><strong>方向已经选了，但还没被周线盖章。这中间的 48 小时，属于有耐心的人。</strong></p>
+</blockquote>
+<hr />
+<p><em>数据源：Crypto 交易员 List（24 位博主全覆盖，163 条窗口内推文）｜图表 97 张已归档 R2｜编译：夜一</em></p>
+<a class="back" href="../">← 返回目录</a>
+</div>
+<footer><div>仅供学习参考，不构成投资建议</div></footer>
+<div class="lightbox" id="lightbox">
+  <div class="lb-close" id="lb-close">✕</div>
+  <div class="lb-stage" id="lb-stage"><img id="lightbox-img" src="" alt=""></div>
+  <div class="hint">双指缩放 · 拖动查看 · 双击复位</div>
+</div>
+<script>
+(function(){
+  var lb = document.getElementById('lightbox');
+  var stage = document.getElementById('lb-stage');
+  var img = document.getElementById('lightbox-img');
+  var close = document.getElementById('lb-close');
+  var scale = 1, tx = 0, ty = 0;
+  var startDist = 0, startScale = 1;
+  var lastX = 0, lastY = 0, startTx = 0, startTy = 0;
+
+  function apply(){ img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')'; }
+  function reset(){ scale = 1; tx = 0; ty = 0; apply(); }
+  function open(src){ img.src = src; reset(); lb.classList.add('active'); }
+  function closeLb(){ lb.classList.remove('active'); }
+
+  function clamp(){
+    if (scale <= 1){ tx = 0; ty = 0; return; }
+    var vw = stage.clientWidth, vh = stage.clientHeight;
+    var dispW = img.offsetWidth * scale;
+    var dispH = img.offsetHeight * scale;
+    var maxTx = Math.max(0, (dispW - vw) / 2);
+    var maxTy = Math.max(0, (dispH - vh) / 2);
+    tx = Math.max(-maxTx, Math.min(maxTx, tx));
+    ty = Math.max(-maxTy, Math.min(maxTy, ty));
+  }
+
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if (t.tagName === 'IMG' && t.id !== 'lightbox-img'){ open(t.src); }
+  });
+  close.addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+
+  stage.addEventListener('touchstart', function(e){
+    if (e.touches.length === 2){
+      startDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+      startScale = scale;
+    } else if (e.touches.length === 1 && scale > 1){
+      lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
+      startTx = tx; startTy = ty;
+    }
+  }, {passive:false});
+
+  stage.addEventListener('touchmove', function(e){
+    e.preventDefault();
+    if (e.touches.length === 2){
+      var d = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+      scale = Math.max(1, Math.min(6, startScale * d / startDist));
+      apply();
+    } else if (e.touches.length === 1 && scale > 1){
+      tx = startTx + (e.touches[0].clientX - lastX);
+      ty = startTy + (e.touches[0].clientY - lastY);
+      clamp();
+      apply();
+    }
+  }, {passive:false});
+
+  stage.addEventListener('dblclick', function(){ if (scale > 1) reset(); else { scale = 2.5; apply(); } });
+  stage.addEventListener('wheel', function(e){ e.preventDefault(); scale = Math.max(1, Math.min(6, scale * (e.deltaY < 0 ? 1.12 : 0.9))); apply(); }, {passive:false});
+})();
+</script>
+</body></html>
