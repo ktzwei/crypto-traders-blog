@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Crypto 交易员观点日报 · 2026.10.01</title>
+<style>
+:root {
+  --bg: #0a0e17; --surface: #111726; --surface-2: #1a2233; --border: #232d42;
+  --text: #e6eaf2; --muted: #8a94ab; --accent: #f7931a; --green: #38d996;
+  --red: #ff5c6c; --amber: #ffb84d; --purple: #a78bfa;
+  --radius: 14px;
+  --mono: "SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:860px; margin:0 auto; padding:0 24px; }
+a { color:var(--accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+header { padding:56px 0 32px; border-bottom:1px solid var(--border); background:radial-gradient(1200px 400px at 20% -10%,rgba(79,140,255,.15),transparent 60%),radial-gradient(800px 300px at 90% -20%,rgba(56,217,150,.08),transparent 60%); }
+.kicker { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:12px; letter-spacing:2px; color:var(--green); text-transform:uppercase; margin-bottom:16px; }
+.kicker::before { content:""; width:28px; height:1px; background:var(--green); }
+h1 { font-size:clamp(26px,4.5vw,38px); font-weight:700; letter-spacing:-0.02em; line-height:1.2; margin-bottom:10px; }
+h1 a { color:var(--text); }
+.date { font-family:var(--mono); color:var(--muted); font-size:14px; }
+h2 { font-size:20px; font-weight:700; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--text); }
+h3 { font-size:17px; font-weight:600; margin:20px 0 10px; color:var(--text); }
+p { margin-bottom:12px; }
+strong { color:var(--text); font-weight:600; }
+em { color:var(--amber); font-style:normal; }
+blockquote { border-left:3px solid var(--green); padding:8px 18px; margin:14px 0; background:rgba(56,217,150,.05); border-radius:0 8px 8px 0; }
+blockquote p { margin:0; }
+code { font-family:var(--mono); color:var(--purple); font-size:13px; background:rgba(167,139,250,.1); padding:1px 7px; border-radius:5px; }
+ul,ol { padding-left:24px; margin:12px 0; }
+li { margin-bottom:8px; }
+table { width:100%; border-collapse:collapse; margin:16px 0; font-size:14px; }
+th { text-align:left; font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); padding:10px 12px; border-bottom:1px solid var(--border); }
+td { padding:12px; border-bottom:1px solid var(--border); vertical-align:top; }
+tr:last-child td { border-bottom:none; }
+td:first-child { font-weight:600; color:var(--accent); white-space:nowrap; }
+hr { border:none; border-top:1px solid var(--border); margin:28px 0; }
+img { max-width:100%; height:auto; border-radius:10px; margin:12px 0; display:block; }
+footer { padding:40px 0 64px; text-align:center; color:var(--muted); font-size:13px; }
+.back { display:inline-block; margin-top:12px; font-family:var(--mono); font-size:13px; }
+.section { padding:12px 0; }
+@media (max-width:600px){
+  .wrap{padding:0 16px;}
+  header{padding:36px 0 20px;}
+  body{font-size:15px; line-height:1.75;}
+  h1{font-size:24px;}
+  h2{font-size:18px; margin:22px 0 12px;}
+  h3{font-size:16px;}
+  blockquote{padding:6px 14px; margin:12px 0;}
+  ul,ol{padding-left:20px;}
+  td:first-child{white-space:normal;}
+  table{font-size:13px;}
+  td{padding:10px 8px;}
+  img{border-radius:8px; margin:10px 0;}
+}
+.lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:9999; overflow:hidden; }
+.lightbox.active { display:block; }
+.lb-stage { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; overflow:hidden; touch-action:none; }
+.lightbox img { max-width:92%; max-height:92%; border-radius:6px; transform-origin:center center; will-change:transform; }
+.lightbox .hint { position:fixed; bottom:14px; left:0; right:0; text-align:center; color:#8a94ab; font-size:12px; pointer-events:none; z-index:10001; }
+.lb-close { position:fixed; top:12px; right:18px; color:#fff; font-size:30px; line-height:1; cursor:pointer; z-index:10001; padding:6px; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="kicker">Crypto Traders Daily · ktzwei.github.io/crypto-traders-blog</div>
+  <h1><a href="../">Crypto 交易员观点日报 · 2026.10.01</a></h1>
+  <div class="date">2026.10.01</div>
+</div></header>
+<div class="wrap">
+<h1>📈 Crypto 交易员观点日报 · 2026.10.01</h1>
+<blockquote>
+<p><strong>素材窗口</strong>：2026-09-30 07:00 ～ 10-01 09:00（北京时间）｜低产博主用库内历史推文补齐
+<strong>覆盖</strong>：名单 29 位博主（list 实时成员 28 位 + 库内历史作者 1 位）｜素材推文 222 条｜R2 图表 113 张
+<strong>口径</strong>：只整理「交易思路」——方向判断、关键价位、进场 / 止损 / 止盈逻辑，不做马后炮
+<strong>行情快照</strong>（10-01 09:00 北京 · OKX）：<strong>BTC 83,503</strong>（24h +0.09%，日振幅 85,650–82,960）｜<strong>ETH 2,684</strong>（+0.48%，2,739–2,658）｜SOL 118.0（−0.78%）｜BNB 770.0（+1.34%）｜HYPE 89.9（<strong>+4.10%</strong>）
+<strong>资金费率</strong>：BTC 永续 +0.0056%（≈中性，无拥挤）｜<strong>背景</strong>：9 月月线已收线，今天是 10 月第一个交易日，恰逢国庆假期——亚洲时段流动性偏薄，欧美才是主战场</p>
+</blockquote>
+<p>════════════════════════════</p>
+<h2>一、今天的题眼：月线收完，所有人还站在同一根 K 线两侧</h2>
+<p>9 月最后一天，BTC 从 82.9k 冲高到 <strong>85.6k</strong>，把「周一高点」和 50 日均线一起踩在脚下，随后又被打回 <strong>83.5k</strong> 一带。月线收出阳线（@cluec3 说的「月线三连阳」基本坐实），10 月开局却先回吐一半——<strong>多空两派现在全都钉在同一道关口上：上方 85–87k，下方 82–83k。</strong></p>
+<table>
+<thead>
+<tr>
+<th>立场</th>
+<th>代表人物</th>
+<th>核心说法</th>
+<th>各自的失效点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🐂 <strong>牛市已开始</strong></td>
+<td>@Crypto_Moe84、@cluec3、@Raizelxbt</td>
+<td>月线三连阳 = 熊市结束；Q4 是 ETH 和 Alt 的大年</td>
+<td>日线跌破 82k 盘整区 → 「牛市」降级为「宽幅震荡」</td>
+</tr>
+<tr>
+<td>🐻 <strong>先冲高再砸</strong></td>
+<td>@XBTkaz、@astronomer_zero、@crptAtlas</td>
+<td>冲 85.6k 只是去扫流动性；下方堆着巨量清算簇</td>
+<td>85.6k 被<strong>有效</strong>站稳并续攻 87k → 空头论点作废</td>
+</tr>
+<tr>
+<td>⚖️ <strong>等触发</strong></td>
+<td>@TraderJqrit、@TTrades_edu、@rahmath369、@nekofrize</td>
+<td>不猜方向，只做「到位置 + 低周期确认」的 A+ 单</td>
+<td>价格直接走完不给回踩 → 计划重估</td>
+</tr>
+</tbody>
+</table>
+<p><strong>一句话概括今天的分歧</strong>：昨天那根从 85.6k 插回 83.5k 的长上影，被多头读成「月线收盘的月底操纵」，被空头读成「87k 牛市陷阱的第一枪」。<strong>双方谁都没错——因为这一带本来就是全场最贵的一根 K 线：它的得失，决定接下来是「换方向」还是「换节奏」。</strong></p>
+<h2>二、🐂 多头派：牛市已开始，请把目标价抬上去</h2>
+<p><strong>@Crypto_Moe84（40 条，全场信号最密的多头）</strong>
+- 主基调一句到位：<strong>「Charts look so FUCK YOU BULLISH」</strong>——图表的看涨程度已经不用解释。他的整套论证中心是 <strong>BTC.D（比特币市值占比）要向下破位</strong>：<strong>「把这条线往上突破，BTC.D 就会崩。」</strong> 他称这是 <strong>「Others/BTC 史上最长的熊市 + 史上最长的筑底过程 = 史上最疯狂的 Altseason」</strong>。
+- 具体到品种：<strong>「$ETH 会在 Q4 直奔 ATH（历史新高），毫无疑问」</strong>（连发 6 条 ETH/BTC 图，一句话反复：「no time to explain」）；PEPE 会涨得凶，<strong>Andy（ANDY）会比 PEPE 更凶</strong>；$DOGE 会猛，但 PEPE 比 DOGE 更猛；$QQQ 突破新高在即；$IGV、$VELO、$ARB（<strong>「$1.2 必须突破，这是重要关卡，底部应该已经在了」</strong>）。
+- 给持有者的纪律只有两句：<strong>「别卖红 K 去买绿 K，耐心」</strong>｜<strong>「未来 12 个月别喝酒，你需要专注」</strong>｜<strong>「过去几年把你的脑子搞坏了，你会卖得太早——把目标价抬上去。」</strong>
+- ⚠️ 读法提醒：他 40 条里没给任何<strong>入场价、止损</strong>，全是方向呐喊 + K 线图。<strong>当「市场情绪温度计」用可以，当交易计划用不行。</strong></p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105397693132743077_29.png" />
+<img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105400560757457245_30.png" />
+<img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105226020953415785_88.png" /></p>
+<p><strong>@cluec3（3 条，中文技术派，结构讲得最清楚）</strong>
+- 结构判断：<strong>「多头结构仍在，中长线以做多思路为主」</strong>——BTC 已结束上半年「低点高点都不断降低」的趋势，转为「低点高点都不断抬高」；<strong>在结构被破坏前一律视作多头</strong>，近期（当时 82-83k）只能算<strong>多头趋势的放缓</strong>，不是空头正式入场。
+- 关键位很具体：<strong>前方长期盘整区高点 82,800 + 近期小盘整区高点 82,300</strong>。若该区<strong>有效跌破</strong>，大概率进入<strong>缓慢上行的宽通道甚至横向震荡</strong>——但依然不算空头入场，只是「多头阶段性结束」。<strong>83,000–82,000 依旧是好的中长线买点</strong>；站稳 85,100 后（原文截断）。
+- 今天补的狠话：<strong>「我可以 99% 提前宣布 BTC 要出现月线三连阳了——BTC 熊市历史里从没出现过月线三连阳。牛市已经来了。」</strong>（注：月线已收，这条基本兑现。）</p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2104870351415177388_54.png" />
+<img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105249705521541308_56.png" /></p>
+<p><strong>@Raizelxbt（11 条，日内执行派）</strong>
+- 触发条件是「区间上沿」：<strong>「$ETH 守住区间上沿的样子——下一个目标是 3,000 美元，等着看。」</strong>
+- 今天已经<strong>分批止盈 ETH</strong>，并明确节奏：<strong>「现在等纽约开盘（NYO）再进新单」</strong>；BTC 的台词是 <strong>「如果在纽约开盘拿到回调，把 BTC 做多到 86k。」</strong>
+- 一句总结昨天：<strong>「Low hold &gt; pump，低点还在看空的人被打脸了。」</strong>（low hold = 前低守住不破又收回的多头信号）
+- ⚠️ 11 条里有 4 条是赠金 / 经纪商推广，方向只有 ETH 3,000 和 BTC 86k 两个数。</p>
+<p><strong>@TraderJqrit（5 条，立场今天原地翻多）</strong>
+- 上午还是空头计划：<strong>「$BTC 今日计划：上方是 EQ highs（等高点）加一片未测试供给区，等低周期确认我就做空。」</strong>
+- 下午直接改口（EQ highs 被拿下之后）：<strong>「$BTC 等高点已拿下 ✅。现在我盯的是区间低点流动性 + 那片未测试的需求区，准备在那边做多、推向新高。高周期市场结构在被证明破坏之前，依然看涨。」</strong>
+- <strong>这是今天最干净的一个「计划被市场证伪 → 立刻换边」的样本</strong>：他不是死扛空头，而是把「等高点被吃掉」当作做空论点失效的信号。</p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105352770471579877_26.jpg" />
+<img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105262734409359457_81.jpg" /></p>
+<p><strong>@0xChainMind（14 条，周期派，结论偏多但内容多为转发）</strong>
+- 最简版策略直接抄：<strong>「减半前 500 天买入，减半后 500 天卖出，$BTC 就这么简单。」</strong>
+- 日内两句话自相矛盾，值得点出：下午说 <strong>「We are going lower...」（我们还会更低）</strong>，深夜又贴出 <strong>「$BTC 与 2022 熊市一模一样的筑底结构——当年堆叠的低点从未被扫掉，价格就这样在同样的吸筹-扩张节奏里走高，所以我很确定底部已经在了。」</strong>
+- 还有一句结构注解：<strong>「Re-accumulation before expansion（扩张前的再吸筹）」</strong>。
+- ⚠️ 另外他转发了大量 @DeFiMidas 的「中期选举前 BTC 每次都崩」「下一轮砸盘随时开始」，<strong>自己的原创结论（底部已到）跟转发的看空内容方向相反</strong>，读的时候要分清谁的嘴。</p>
+<p><strong>@trader_maxey（2 条，中文，专盯 HYPE 生态）</strong>
+- <strong>「aster-2:native 这个币终于开始突破了，叙事足够大；不过我跟 $hype 对比了一下，市值也没低估太多，只能靠牛市的星辰大海了。」</strong>
+- 实盘动作：<strong>「hyperliquid:native（$HYPE）斜向边沿 / 二次回调，做多试一试。」</strong>——HYPE 今天 24h <strong>+4.1%</strong>，是主流里最强的。</p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105330062551867400_28.png" /></p>
+<p><strong>@Crypto_Scient（6 条，波段 + 现货派）</strong>
+- 月结晒单：<strong>9 月收 26.22R，组合 +80%（以现货为主），连续三个大月</strong>——<strong>「没有纪律，这种月份不会自己来。」</strong>
+- 给出<strong>两张 BTC 波段多单的入场条件</strong>：① <strong>扫掉周一低点后快速收回</strong>（下方流动性被 raid 再 reclaim 是激进入场，他预期随后是「激进的向上突破」）；② 价格来到另一个预设位（原文截断）。
+- 其他品种：<strong>$SOL 预期 10 月初抛售</strong>——RSI 熊背离 + 三推、价格跌回区间，<strong>120–121 做空、110 附近做多</strong>；<strong>$TAO 3D 级别把日线支撑阻力 + 3D 200MA 翻多</strong>；<strong>$XAU（黄金）这笔止损出局</strong>，「下一个」。</p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105219627492286574_60.jpg" />
+<img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105241715745661055_61.jpg" /></p>
+<h2>三、🐻 空头派：这一冲，是去扫流动性</h2>
+<p><strong>@XBTkaz（4 条，流动性/操纵派）</strong>
+- 日内计划写得很直白：<strong>「$BTC：预期今天价格先去扫掉周一高点（monH），然后砸下去猎取下方的流动性。」</strong>（配图就是他的扫描目标，连发两次强调）
+- 大框架配合：<strong>「记住，新月要来了，而我们下方堆着巨量流动性簇。」</strong> 用的词是 <strong>liquidity clusters</strong>——底下全是一层层的多单止损。
+- 还有一句反身性观察：<strong>「Get Ready，翻译过来就是：下周。」</strong>（暗示大动作留到下周）</p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105267038449197404_70.jpg" /></p>
+<p><strong>@crptAtlas（17 条，全场最大声的看空，但几乎全是转发）</strong>
+- 自己的原创只有两条路标：<strong>「$BTC IS ABOUT TO COPY 2022 PATTERN（即将复制 2022 形态）」</strong>——他说 <strong>87k 那个「牛市陷阱」已经过去</strong>，「2022 年没人愿意谈的那一段」就是陷阱之后发生的事，<strong>「如果结构重演，$64K 可能在 30 天内出现。」</strong> 今天又补一句：<strong>「IT'S NOT FCKING OVER，BTC 的周期永远一样。」</strong>
+- ⚠️ 17 条里 13 条是转发（@cryptosymbiiote 的「周线失衡终会回补」、@DeFiMidas 的「中期选举前必崩」），<strong>原创内容还夹带 XRAY 工具推广</strong>。<strong>他的价位没有任何触发条件，属于纯喊单——当情绪样本看，别当计划用。</strong></p>
+<p><strong>@OwaisAlpha1（2 条，由空翻多的样本）</strong>
+- 前几天他还是空单（现价进、<strong>止损 84,551</strong>），被 85.6k 直接打掉后改口：<strong>「$BTC 结构破坏已确认（周线 BOS + 50SMA 突破），现在我们要的共振都齐了；老实说我看不到主要供给区……如果你能等到 60k 就买。这次看起来确实不一样。」</strong>
+- → 跟 @TraderJqrit 是同一个方向的两面：<strong>空头论点被 85k 上方的突破打穿后，两人都选择「不再死扛、承认结构变了」。</strong> 但他只给了「60k 再买」这种遥不可及的条件，<strong>没有可执行的入场纪律</strong>，参考价值低于他那个 84,551 的止损本身。</p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105199332517466469_107.jpg" /></p>
+<h2>四、🧪 今日最完整的实盘样本：@astronomer_zero 一天走完「多 → 空 → 多」</h2>
+<p><strong>@astronomer_zero（18 条，今天教学价值最高，逐笔拆给你看）</strong></p>
+<p>他这天把「偏见（bias）→ 触发（trigger）→ 执行（execution）」的完整链条演了一遍，而且<strong>每一步都提前写了计划</strong>，不是事后补图。按时间顺序：</p>
+<table>
+<thead>
+<tr>
+<th>时间（北京）</th>
+<th>动作</th>
+<th>原话要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21:23</td>
+<td>多单</td>
+<td>「迟来的 / 高确认度的入场，从 long plan 2 派生——<strong>牛市派对快结束了，我慢慢开始找反手做空的机会</strong>」</td>
+</tr>
+<tr>
+<td>21:30</td>
+<td><strong>翻空</strong></td>
+<td>「多单在这里翻成空单。到 short trigger 1 了，时机与共振齐了：<strong>NYO（纽约开盘）+ midrange（区间中轴）+ 永续驱动 + 大量清算 + 月线收盘预期 + 看空偏见</strong>」</td>
+</tr>
+<tr>
+<td>21:39</td>
+<td>空单止盈</td>
+<td>「TP1，晚安」</td>
+</tr>
+<tr>
+<td>22:07</td>
+<td>教学</td>
+<td>「<strong>小时图是分析周期，除以 12 = 5 分钟图作为触发周期，这是我个人的规则</strong>——触发信号与它如何兑现，配图看」</td>
+</tr>
+<tr>
+<td>22:23</td>
+<td>空单</td>
+<td>「我做多（虽然晚），但<strong>做空是有信念、且与偏见一致的</strong>——今天的活干完了，现在就坐在空单里」</td>
+</tr>
+<tr>
+<td>23:07</td>
+<td>部分止盈</td>
+<td>「<strong>已经赚了 1,500 点</strong>，在这里再取一部分利润锁定胜局——也到了原多单计划说的关键支撑区，<strong>已平掉 60%</strong>」</td>
+</tr>
+<tr>
+<td>23:49</td>
+<td>收工反思</td>
+<td>「价格再次完美守住区间低点支撑——也就是我原多单计划所在处。<strong>short plan 1 已完成，我不再在那里找触发</strong>：现在我只在区间低点做多、只在区间上沿做空」</td>
+</tr>
+<tr>
+<td>次日 07:22</td>
+<td><strong>翻回多</strong></td>
+<td>「把空单利润再翻成多单。回到 long plan，回到区间低点，而且守得非常干净——<strong>优雅地走出震荡</strong>，在空仓躲了三天震荡之后，是时候了」</td>
+</tr>
+</tbody>
+</table>
+<p><strong>他的核心方法论（可以直接抄的两条）</strong>
+1. <strong>周期换算规则</strong>：<strong>分析用小时图，触发看小时图 ÷ 12 = 5 分钟图</strong>。这就是他为什么总能在同一根 K 线上给出「提前写好的触发位」。
+2. <strong>偏见与执行分离</strong>：<strong>高周期仍然看空（他的看空论点是「预期跌向 75k」），但低周期该做多就做多</strong>——「我对多单保持谨慎、对空单更积极」，于是多单只做「到关键区的短线」，空单才敢下重手。
+3. 他反复强调一条<strong>读他推文的纪律</strong>：<strong>「请以标题里的 hourly / daily / macro 周期为准，否则你会被自己误导」</strong>——同一条推文配不同周期的图，含义完全不同。</p>
+<p><strong>他对昨天那波「牛市回来了」的判断（金句）</strong>
+- <strong>「所有人都知道的是：过去一周做多的人全在水下，没人预期还会破位，可他们正在被逼出多单。『牛市回来了』——是的，但时机才是关键。」</strong>（It is, but timing is key.）
+- TPO（时间价格机会图）视角：<strong>「下方只有 poor lows（低质量低点）、上方只有强高点——从这里做多，从交易者概率的角度讲就是赌博。」</strong></p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105289220344668483_18.jpg" />
+<img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105313477489496308_22.jpg" /></p>
+<blockquote>
+<p>💡 <strong>给读报的人</strong>：他是今天唯一一个把「进、出、反手、再反手」四个动作连同理由全写下来的博主。<strong>不用认他的方向，学他的框架就够了。</strong></p>
+</blockquote>
+<h2>五、📚 教学与纪律派：不给方向，给方法</h2>
+<p><strong>@TTrades_edu（6 条，ICT 模型派，今天全是干货）</strong>
+- <strong>SMT（相关品种背离）的正确用法</strong>：发了篇「<strong>别再硬凑 SMT 信号</strong>」——<strong>不是</strong>去两个图里硬找背离，而是 <strong>「用 SMT 配合相关资产去瞄准前高」</strong>。翻译成白话：SMT 是「确认工具」，不是「信号发生器」，先有目标位、再用它验证。
+- <strong>延续形态的判定标准（可直接抄）</strong>：<strong>「一个很简单的提示——看价格是否尊重对立 K 线的 50%。你不希望看到价格收在 50% 之下。」</strong>（即回撤不过半，形态才成立）。
+- 还有一条吐槽梗图：「说『ICT macros 是真的』的人是什么表情」——<strong>无当日方向，纯教学</strong>。</p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105107563893387653_63.png" />
+<img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105343425646399859_8.jpg" /></p>
+<p><strong>@KoroushAK（3 条）</strong>
+- 发了一篇<strong>「交易 9 年，关于「离场」我知道的一切」</strong>：6 个退出策略 + 真实案例（长文，正文在 X 上的 thread 里）。
+- 一条市场更新视频的目录透露出他的判断框架：<strong>「0:00 牛市到底有没有在发生？2:33 BTC 拆解，7:57 SOL / ETH 拆解，10:29 什么时候是最激进做多的时候？」</strong>——注意他把「何时激进做多」放在最后，说明他自己也没确认牛市。
+- 金句（反常识，值得记）：<strong>「更多的交易知识不会让你赚更多钱。别把几百小时砸在 YouTube 教程和 X 的帖子上——去用小仓位多交易、把所有东西记下来、把作息/运动/饮食优化好。」</strong></p>
+<p><strong>@rahmath369（4 条，纯纪律流）</strong>
+- <strong>「信任我：如果你真的只信任一套简单的入场模型，那一个决定就能改变你整个交易生涯。」</strong>（One setup for life：一套模型用一辈子）
+- <strong>「专注 A+ 信号。你不需要交易每一个动作，也不需要抓住每一个机会。等符合你模型的那个，毫不犹豫执行，其余的都放掉。质量优于数量。」</strong>
+- <strong>「你知道为什么交易要花 3-4 年才真正成功吗？策略可以从课程或导师那学到，但你无法下载他们的心理素质——亏损、盈利、怀疑、FOMO、压力，你得自己经历。」</strong></p>
+<p><strong>@nekofrize（Eureka，3 条，中文）</strong>
+- 今日唯一干货是<strong>强趋势中的入场取舍</strong>：<strong>「强趋势中，不能假设市场一定会给你最舒服的入场位置。极强的单边趋势里，顺势方很少会给逆势方回调到趋势线、缺口打平或止盈的机会。所以在强趋势回调中，出现『逆势阻力衰竭 + 良好跟随』后就可以直接入场，无需等回调到静态阻力位。」</strong>
+- 风控配套：<strong>「这种动量做法，一旦在阻力位出现支阻互换信号并且有跟随，立刻打损离场即可——用小止损换取避免踏空、参与主升浪的机会。」</strong>
+- → 这条和 @Stefan_B_Trades 的「不要等舒服的位置」是同一枚硬币的两面：<strong>趋势里等人，就是在等踏空。</strong> 另一条是国庆出行吐槽，无观点。</p>
+<h2>六、🧭 执行派实盘：今天谁下了单，谁在等</h2>
+<p><strong>@SailorManCrypto（Popeye，19 条，全场兑现最干净的一笔）</strong>
+- <strong>ETH 一笔完成单</strong>：<strong>「4.5R，分批锁定 3.5R。持仓 1 小时，狙击式入场，零回撤，瞬间推动（instant displacement）。」</strong> 入场前他标注的是 <strong>「ETH：一个相当可交易的 LTF（低周期）区间」</strong>。
+- <strong>BTC 的判断</strong>：<strong>「价格正在压缩（compressing），大多数时候压缩之后就是扩张（expansion）。」</strong>——纯波动率逻辑，没给方向。
+- <strong>黄金</strong>：延续前几天的多单，<strong>「在 PCE 和月线收盘前先把止损推到入场价下方，确保无风险。」</strong>（风控意识很强）
+- <strong>PONS</strong> 的形态清单可以当模板抄：<strong>「区间形成 → 偏离（deviation）→ 买盘压力 → 看涨背离 → MSB（市场结构突破）」</strong>。
+- 另有一条给订阅者的宏观研究（铀/核燃料供应链断了要重建十年），以及 500 订阅里程碑庆祝。<strong>方向：ETH 区间可交易、BTC 压缩待扩张。</strong></p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105229856396992853_95.jpg" />
+<img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105246188119482629_99.png" /></p>
+<p><strong>@Stefan_B_Trades（10 条，日内兑现派）</strong>
+- 全天连续兑现：<strong>BTC 多单 TP 命中 +4.11 R:R</strong>；<strong>「把大部分多单利润落袋，周二就框好的那张空单也立刻给了利润——市场给的够多了，这不是贪心的时候。」</strong>；<strong>BTC 空单 TP 命中，今天收工。</strong>
+- 昨天的计划纪律复述一遍：<strong>「$BTC 计划没变——没先拿下周一高点，我看不到砸下去的理由」</strong>；<strong>「造市商不会让事情变简单，我选择等明天纽约时段。」</strong>
+- 隔夜把 <strong>$ZEC 和 $BTC 多单推到 1:1 无风险</strong>，今天 $ZEC 果然动了；另关注 <strong>$TAO</strong>。</p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105305040600650078_48.jpg" /></p>
+<p><strong>@shinigamiXBT（2 条）</strong>
+- 昨天兑现 <strong>+2.5R</strong>，触发逻辑说得很清楚：<strong>「更高的低点进入高周期 FVG（公允价值缺口），同时有相当数量的卖方被诱多陷阱困在低点。」</strong>（mousetrap = 诱捕）
+- 今天更新持仓：<strong>「高周期 POI（关注点）里一串更高的低点正在形成，目前看发展得不错；跟直播间一起进了多单，慢慢磨（slow grind）——现在只是盯着，以防这波慢牛的低点被破。」</strong> <strong>持仓多单，等确认。</strong></p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105387330848821636_9.png" /></p>
+<p><strong>@Osbrah（7 条）</strong>
+- 诚实复盘自己判断错了：<strong>「我以为 BTC 会先去打下方 band，结果它选了上方——不过话说回来，PCE 公布之后这些位置依然守得很好。」</strong>
+- 给出一个具体承接位：<strong>「这里是一个潜在的反弹区：订单块（Orderblock）+ TPO 时段 POC（成交量控制点）。」</strong>
+- 假期结束回归直播，<strong>「什么都没变，今天有 PCE，可能看到加速，往哪边都行。」</strong> 另一条是玩笑（让 AI 回来吧），无观点。</p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105308456861515817_1.jpg" /></p>
+<p><strong>@EZCharts_（2 条）</strong>：两条一模一样的 <strong>「One more dip then up imo（再来一次下探，然后向上）」</strong>——立场没变，<strong>价格已经涨上去了，这单目前偏逆势</strong>。</p>
+<p><strong>@Luckshuryy（4 条，订单流工具派）</strong>
+- <strong>开源了他每天用的全部交易视图布局</strong>（免费的）：<strong>「htf 到 ltf 总览 / 日线 TPO / 时段 TPO / footprint（足迹图）/ CVD（吸收）/ 未平仓合约（OI）」</strong>——这是他做「实时 tick 回放」和每周复盘最大波动时用的工具集。
+- 交易所选择给了明确分工：<strong>「做主流币用 @Lighter_xyz，做 RWA 用 @HyperliquidX。」</strong>
+- 开始往 Telegram 搬日内零散观点。<strong>无方向，纯工具。</strong>（注：CVD = 累计成交量差，用来看买卖谁在吸收；TPO = 时间价格机会图。）</p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105280258912215443_79.jpg" /></p>
+<h2>七、🔗 链上 / 生态视角</h2>
+<p><strong>@market_beggar（貝格先生，3 条，链上数据派）</strong>
+- <strong>XPL 持仓追踪</strong>：<strong>第一止盈目标（0.1232）已到，从发文价算斩获 +38%</strong>；摸到 TP1 后出现 <strong>Stop Hunt（扫止损）操纵</strong>，价格一轮回撤（最低到约 0.077），<strong>他开始慢慢把仓位接回来，准备第二轮进攻</strong>。前提写得死死的：<strong>「只要 0.072 的结构点没被跌破，看涨结构始终成立。」</strong> <strong>这个 0.072 就是他的止损线。</strong>
+- 自研 <strong>「BTC 吸籌趨勢評分」</strong>（分析过去一个月各族群钱包余额变化趋势，越接近 1 代表大户吸筹越积极）最新读数：<strong>大户吸筹的积极度相比前几周放缓</strong>，叠加一周前出现的「第二批利润兑现潮」，<strong>导致 BTC 冲 87K 后回调、进入新一轮窄幅震荡</strong>。该篇标题叫 <strong>「油門仍未踩滿」</strong>——即：还没到真正拉升的时候。</p>
+<p><img alt="" src="https://img.ktzwei.top/crypto-traders/2026-10-01/2105111671610196379_102.jpg" /></p>
+<p><strong>@blknoiz06（Ansem，12 条，生态 VC 视角）</strong>
+- 一句判断开场：<strong>「alt szn（山寨季）」</strong>。
+- 对杠杆需求的看法：<strong>「我很看好极端杠杆的需求，因为链上投机在持续增长。Papertrade 本质上是把你在超低市值币上看到的那种胃口，套用到杠杆上——你只有 1k 本金，却想要接近 100k 仓位的敞口，这就是它的吸引力。」</strong>（他自己也标了「very low prob」，即胜率很低）
+- <strong>给链上玩家的建议</strong>：<strong>「别忘了 CEX 的山寨也能给 5-10 倍回报；你们整天在低市值垃圾币上赌，不如也拿一部分仓位去做永续。而且 CEX 山寨在有真正基本面叙事时，背后通常有更大的买家。」</strong>
+- ⚠️ 12 条里 8 条是转发（多为生态/项目宣传）。<strong>方向：山寨季 + 高杠杆需求增长。</strong></p>
+<p><strong>@tradermatt（8 条，几乎全是生活流）</strong>
+- 交易相关只剩一句，但方向明确：<strong>「看了图表，像是典型的月底操纵（typical end of month fuckery），我依然预期更高（still expecting higher）。」</strong>
+- 其余全是恢复伤情、Netflix、足球、以及一条实用安全习惯：<strong>「做加密快 10 年了，我每次大额转账之前都先用 20 美元测试提现。」</strong>（这条值得所有人抄）</p>
+<h2>八、😴 今日无实质交易观点（低产 / 只互动）</h2>
+<ul>
+<li><strong>@LH_btc（2 条）</strong>：「怎么就到 10 月了，2026 过得像一场模糊」「happy monthly closee」——<strong>纯闲聊，无观点</strong>。</li>
+<li><strong>@茶不思 mdzzi（6 条）</strong>：唯一沾交易的是 <strong>「$SDGR 不到 50 亿市值，暂时不考虑卖出」</strong>（持仓管理，非新观点）；其余全是关于 Polymarket 撸空投、向 OKX 客服要图、以及几条表情包式的互动。</li>
+<li><strong>@MinaraCN（4 条）</strong>：全部是产品/内容推广（<strong>「NVDA 该买还是卖」的多 Agent 实测报告、Harness 支持 GPT-6.1 Sol、Follow 策略杠杆可调</strong>），<strong>无自主行情观点</strong>。</li>
+<li><strong>@Trader_Dante（2 条）</strong>：<strong>「看来这周我又要卖白银了」</strong>（延续做空白银的立场，但无新执行细节）；另一条是转发。</li>
+<li><strong>@48K纯白（2 条）</strong>：<strong>「又到了熟悉的位置了 $CBRS，我就说这么多」</strong>（$CBRS 到关键位，无展开）；另一条是很有代表性的一句——<strong>「这几天又是满屏的 BTC，各路大神争先恐后发观点，越是这样我越不愿意发推，轻松过个十一。」</strong>（国庆不发推）</li>
+<li><strong>@Osbrah / @shinigamiXBT / @EZCharts_</strong> 已在前文实盘段落覆盖。</li>
+</ul>
+<h2>📎 附录：当日推文原文全量</h2>
+<blockquote>
+<p>窗口内 222 条推文原文，按博主分组；时间已从 UTC 换算为北京时间（+8）。转发（RT）保留原样。</p>
+</blockquote>
+<h3>@Osbrah（7 条）</h3>
+<ul>
+<li><strong>09-30 22:43</strong>　I thought bitcoin:native would tag the lower band first, but it did go for the upper instead.
+  That being said, levels are quite respected despite the PCE release.
+  Hope the analysis has been helpful. https://t.co/YWOhOmD4G6
+  🔗 https://x.com/Osbrah/status/2105307461846761753</li>
+<li><strong>09-30 22:47</strong>　Potential bouncing area here.
+  Orderblock and TPO session POC. https://t.co/LJlSp22WE4
+  🔗 https://x.com/Osbrah/status/2105308456861515817</li>
+<li><strong>09-30 23:09</strong>　We are so BACK ! Come here lads - Live Trading | Analysis | Education | !airdrop !cft !okx !discord !mentorship !streams https://t.co/wHdI2FNuJG
+  🔗 https://x.com/Osbrah/status/2105314044865589370</li>
+<li><strong>09-30 23:10</strong>　Back to streaming !
+  Holidays are done, we are back to business!
+  Join here https://t.co/H0shi2svxY
+  🔗 https://x.com/Osbrah/status/2105314284544881120</li>
+<li><strong>10-01 03:24</strong>　Please bring back Artificial Intelligence then. https://t.co/KUScwpN2Ei
+  🔗 https://x.com/Osbrah/status/2105378236436033571</li>
+<li><strong>09-30 04:36</strong>　RT @solivon_321: @Chroma_Trading Proud to be part of @Chroma_Trading. The education and environment made a real difference this month.
+  Hug…
+  🔗 https://x.com/Osbrah/status/2105033876242383342</li>
+<li><strong>09-30 13:26</strong>　Good morning gang ☕️
+  Nothing has changed, PCE today we may see acceleration. One side or another. https://t.co/puMahTDBQl
+  🔗 https://x.com/Osbrah/status/2105167491391521069</li>
+</ul>
+<h3>@blknoiz06（Ansem，12 条）</h3>
+<ul>
+<li><strong>09-30 21:17</strong>　alt szn
+  🔗 https://x.com/blknoiz06/status/2105285902692204562</li>
+<li><strong>09-30 21:39</strong>　i’m pretty bullish on the demand for extreme leverage as onchain speculation keeps growing
+  Papertrade is basically taking the same appetite you see in ultra low-cap coins and applying it to leverage
+  if you only have $1k but want exposure closer to a $100k position, that’s the appeal
+  very low prob
+  🔗 https://x.com/blknoiz06/status/2105291411063292230</li>
+<li><strong>09-30 22:13</strong>　RT @Kaiz_294: Ansem is farming papertrade because losing is literally how you earn ownership
+  “The only way you're going to be able to get…
+  🔗 https://x.com/blknoiz06/status/2105299976603717723</li>
+<li><strong>09-30 23:19</strong>　my advice to my onchain brethren is to not forget that the cex alts also can give 5-10x returns, you all are gambling on lowcap shitters all day you might as well also sling some of your port on perps
+  &amp; cex alts typically have more size buyers behind them when they do have a real fundamental narrat
+  🔗 https://x.com/blknoiz06/status/2105316570318983297</li>
+<li><strong>10-01 01:22</strong>　RT @Kaiz_294: Pearl turns the compute securing a blockchain into the same kind of work powering AI
+  “It's like AI Bitcoin, quote unquote”…
+  🔗 https://x.com/blknoiz06/status/2105347629161033923</li>
+<li><strong>09-30 02:47</strong>　RT @Kaiz_294: Rasmr and Ansem frame crypto traders as internet-native trend hunters, racing to price the next shift before consensus catche…
+  🔗 https://x.com/blknoiz06/status/2105006643465646573</li>
+<li><strong>09-30 06:23</strong>　RT @0xMentalIllness: You have to be the guy. Put the party together. Invite people over consistently. Plan the trip.
+  As with almost all b…
+  🔗 https://x.com/blknoiz06/status/2105060909408555061</li>
+<li><strong>09-30 06:24</strong>　RT @BLESSEDJINGTAO: Not a soul who chirps frank is better than him at trading. Not one
+  🔗 https://x.com/blknoiz06/status/2105061254033289627</li>
+<li><strong>09-30 06:41</strong>　RT @collie_crypto: Pump looks like it could be loading up the half pipe play similar to what lighter pulled https://t.co/z2E1mRrqdV
+  🔗 https://x.com/blknoiz06/status/2105065362815586758</li>
+<li><strong>09-30 12:11</strong>　dario kinda reminds me of sam
+  🔗 https://x.com/blknoiz06/status/2105148507124625614</li>
+<li><strong>09-30 12:14</strong>　RT @kai_xbt: Threadguy reveals his entire NYC daily routine from 6:28 AM to lights out
+  "I wake up at 6:28, go in the mirror, look myself i…
+  🔗 https://x.com/blknoiz06/status/2105149136534216806</li>
+<li><strong>09-30 15:59</strong>　RT @Kaiz_294: Ansem believes the best companies win by adapting fast once a new idea proves itself
+  “It's very, very, very hard to come up…
+  🔗 https://x.com/blknoiz06/status/2105205845403566383</li>
+</ul>
+<h3>@KoroushAK（3 条）</h3>
+<ul>
+<li><strong>09-30 22:03</strong>　I’ve traded for 9 years and this is everything I know about trade exits.
+  A thread on my 6 best strategies with real trade examples🧵 https://t.co/tf7OddHXQJ
+  🔗 https://x.com/KoroushAK/status/2105297369181176016</li>
+<li><strong>09-30 02:15</strong>　Crypto Market Update
+  0:00 Is a bull market happening or not?
+  2:33 BTC breakdown
+  7:57 SOL / ETH breakdown
+  10:29 When's the best time to aggressively long? https://t.co/1mkjWXskoU
+  🔗 https://x.com/KoroushAK/status/2104998622073180442</li>
+<li><strong>09-30 19:00</strong>　More trading knowledge doesn't make you more money.
+  Instead of spending 100s of hours on YouTube tutorials and X threads:</li>
+<li>Trade more (with small position sizes)</li>
+<li>Journal everything</li>
+<li>Optimise your lifestyle (sleep / exercise / diet)
+  🔗 https://x.com/KoroushAK/status/2105251347826413796</li>
+</ul>
+<h3>@cluec3（3 条）</h3>
+<ul>
+<li><strong>09-30 21:34</strong>　依旧是昨天的 BTC 公开策略
+  结果是最美好的四个字
+  如期而至😋
+  🔗 https://x.com/cluec3/status/2105290112334729288</li>
+<li><strong>09-30 17:46</strong>　BTC当前盘面技术分析
+  首先阐述观点 多头结构仍在 中长线以做多思路为主
+  BTC已经结束上半年的低点高点都不断降低的趋势
+  转为低点高点都不断抬高的趋势
+  在结构没有破坏之前 都视作多头结构 如（图1
+  近期趋势只能视作多头趋势的放缓 而不能视作空头的正式入场
+  比较关键的位置为 （如图2
+  前方长期的盘整区高点 82800和 近期的小盘整区高点82300
+  如果这个区域出现有效跌破 市场大概率会进入一个缓慢的上涨宽通道甚至横向的震荡区间
+  但依然无法视作空头的正式入场 只能视作多头趋势的阶段性结束
+  目前83000-82000这个区间依然是一个好的中长线买点
+  如果BTC能够重新站稳85100 形成
+  🔗 https://x.com/cluec3/status/2104870351415177388</li>
+<li><strong>09-30 18:53</strong>　我可以99%的提前宣布  BTC要出现月线三连阳了
+  在BTC的熊市历史里 是从来没有出现过月线三连阳的
+  我可以说了吗 各位交易员们
+  牛市已经来了 https://t.co/xb8JOPrzmi
+  🔗 https://x.com/cluec3/status/2105249705521541308</li>
+</ul>
+<h3>@tradermatt（8 条）</h3>
+<ul>
+<li><strong>10-01 00:46</strong>　gm
+  healing is progressing nicely from my fall. got very lucky with where the impact was because there is minimal swelling and bruising
+  a cm lower and i think it would have been a much different story
+  looked at the charts and looks like typical end of month fuckery
+  still expecting higher. back ab
+  🔗 https://x.com/tradermatt/status/2105338416007111084</li>
+<li><strong>10-01 02:47</strong>　been in crypto for nearly 10 years and i still always do a test $20 withdrawal first before sending the bulk
+  🔗 https://x.com/tradermatt/status/2105368894911263152</li>
+<li><strong>10-01 04:54</strong>　trading view has sucked since they changed the app to the scrolling timeframe and also not actually loading the chart when you click it on your watch list https://t.co/4ioqgJUL5i
+  🔗 https://x.com/tradermatt/status/2105400898545484182</li>
+<li><strong>10-01 06:45</strong>　third time's a charm for klopp, surely gotta get the win tomorrow
+  if not he has to come back to liverpool 😁 https://t.co/omH2fYn8NN
+  🔗 https://x.com/tradermatt/status/2105428896845824440</li>
+<li><strong>10-01 07:28</strong>　watching season 2 of the gentlemen with the mrs whilst i'm incapacitated
+  starting episode 2 now, first one was a banger 👌 https://t.co/8TgfNb0tch
+  🔗 https://x.com/tradermatt/status/2105439681299038401</li>
+<li><strong>10-01 08:40</strong>　RT @tradermatt: been in crypto for nearly 10 years and i still always do a test $20 withdrawal first before sending the bulk
+  🔗 https://x.com/tradermatt/status/2105457819734454293</li>
+<li><strong>09-30 07:03</strong>　thanks for all the messages, too many to go through individually but i'm doing okay
+  i'm in an airbnb which has a spiral staircase and we didn't have the light on downstairs. went running to my son when he was screaming in the bedroom hence the fall
+  should have said i got in a fight though 😂
+  🔗 https://x.com/tradermatt/status/2105070942061732217</li>
+<li><strong>09-30 07:03</strong>　RT @tradermatt: if you're following me then thank you because you are genuinely helping me and my life 💪
+  🔗 https://x.com/tradermatt/status/2105070999997943918</li>
+</ul>
+<h3>@TTrades_edu（6 条）</h3>
+<ul>
+<li><strong>10-01 00:58</strong>　Want me to start dropping little tips and where they are actually applicable?
+  🔗 https://x.com/TTrades_edu/status/2105341469129081066</li>
+<li><strong>10-01 01:06</strong>　https://t.co/CUIqiCUAIN
+  🔗 https://x.com/TTrades_edu/status/2105343425646399859</li>
+<li><strong>10-01 04:38</strong>　Stop Trying to Force a Setup with SMT https://t.co/xCbUASCvVc
+  🔗 https://x.com/TTrades_edu/status/2105396879752302624</li>
+<li><strong>09-30 04:34</strong>　Using SMT With Correlated Assets to Target Previous Highs https://t.co/mfPBZCoGVp
+  🔗 https://x.com/TTrades_edu/status/2105033548075782337</li>
+<li><strong>09-30 06:57</strong>　How people feel saying
+  “ict macros are real” https://t.co/k7GrwPEYYa
+  🔗 https://x.com/TTrades_edu/status/2105069470020759632</li>
+<li><strong>09-30 09:28</strong>　Very simple tip with continuations.
+  Look for them to respect the 50% of the opposing candles.
+  You do not want closure below 50%. https://t.co/SfnSAPPh5e
+  🔗 https://x.com/TTrades_edu/status/2105107563893387653</li>
+</ul>
+<h3>@shinigamiXBT（2 条）</h3>
+<ul>
+<li><strong>10-01 04:00</strong>　lil update on this
+  series of higher lows continue to form in a HTF poi, seems to look good for now as its developing well for it
+  got into longs with the chat and cooked this slow grind which i discussed in that stream on monday aswell, for now;
+  just watching incase this slowgrind lows break if
+  🔗 https://x.com/shinigamiXBT/status/2105387330848821636</li>
+<li><strong>09-30 17:23</strong>　+2.5R
+  trade shared and explained yesterday on live stream at 25:43 then posted here publicly
+  trigger for the trade was a higher low into a HTF fvg, with decent amounts of sellers being mousetrapped into the low
+  missing out if not joining these free streams lads, explained the HTF levels and what
+  🔗 https://x.com/shinigamiXBT/status/2104864657940824533</li>
+</ul>
+<h3>@EZCharts_（2 条）</h3>
+<ul>
+<li><strong>09-30 22:28</strong>　One more dip then up imo https://t.co/z1Dvfwo65x
+  🔗 https://x.com/EZCharts_/status/2105303702575743117</li>
+<li><strong>09-30 23:59</strong>　One more dip then up imo
+  🔗 https://x.com/EZCharts_/status/2104964193795412041</li>
+</ul>
+<h3>@Raizelxbt（11 条）</h3>
+<ul>
+<li><strong>09-30 21:10</strong>　$BTC https://t.co/rt2DJ6ymOf
+  🔗 https://x.com/Raizelxbt/status/2105284125947219972</li>
+<li><strong>09-30 22:33</strong>　RT @EZCharts_: One more dip then up imo https://t.co/z1Dvfwo65x
+  🔗 https://x.com/Raizelxbt/status/2105304951270347180</li>
+<li><strong>09-30 23:48</strong>　RT @Raizelxbt: 2022: I was in his DMs asking how to sign up through his link to get a bonus for trade because i really dont have funds
+  Fa…
+  🔗 https://x.com/Raizelxbt/status/2105323999446368345</li>
+<li><strong>09-30 04:49</strong>　The way $ETH holding above range high
+  Am expecting 3000$ next
+  Wait and watch
+  🔗 https://x.com/Raizelxbt/status/2105037231216062467</li>
+<li><strong>09-30 15:46</strong>　2022: I was in his DMs asking how to sign up through his link to get a bonus for trade because i really dont have funds
+  Fast forward to today after 4years grind i have millions in bank and house cars etc
+  Crazy how life changes when you stay consistent.
+  Keep learning. Keep showing up. Keep going.
+  🔗 https://x.com/Raizelxbt/status/2105202605383454975</li>
+<li><strong>09-30 18:09</strong>　🎁 GIVEAWAY: 3 x $10k funded accounts
+  Excited to partner with @verticalpropx 🏔️
+  To kick things off, 3 accounts of $10k each will be dropped randomly to anyone who buys using my code.
+  Why Vertical:
+  • Skip the eval with instant funding up to $100k (best price in the ecosystem), or pay for a classic
+  🔗 https://x.com/Raizelxbt/status/2105238529148166276</li>
+<li><strong>09-30 20:34</strong>　Partials out here on $ETH
+  Will wait for NYO open now to enter new trades https://t.co/tGqWyQspVw
+  🔗 https://x.com/Raizelxbt/status/2105275040082374677</li>
+<li><strong>09-30 20:37</strong>　Low hold&gt;pump
+  Mfs was bearish posting at lows 😹
+  🔗 https://x.com/Raizelxbt/status/2105275936212123789</li>
+<li><strong>09-30 20:41</strong>　✅✅
+  🔗 https://x.com/Raizelxbt/status/2105276800448532612</li>
+<li><strong>09-30 20:46</strong>　If you get dip on NYO long this shit to 86k
+  $BTC
+  🔗 https://x.com/Raizelxbt/status/2105278108870045998</li>
+<li><strong>09-30 20:48</strong>　RT @Raizelxbt: ✅✅
+  🔗 https://x.com/Raizelxbt/status/2105278525939060756</li>
+</ul>
+<h3>@XBTkaz（5 条）</h3>
+<ul>
+<li><strong>09-30 22:10</strong>　RT @XBTkaz: $BTC
+  Expecting price to sweep the monH today before dumping to hunt out the liquidity on the downside. https://t.co/GBtXBShsp0
+  🔗 https://x.com/XBTkaz/status/2105299312427372997</li>
+<li><strong>09-30 22:25</strong>　RT @XBTkaz: Get Ready,
+  Translation: Next Week.
+  🔗 https://x.com/XBTkaz/status/2105302918782234625</li>
+<li><strong>10-01 05:05</strong>　RT @XBTkaz: $BTC
+  Just so you keep this in mind, a new month is coming,
+  And we have massive clusters of liquidity stacked below us, all l…
+  🔗 https://x.com/XBTkaz/status/2105403619176825070</li>
+<li><strong>09-30 03:50</strong>　Get Ready,
+  Translation: Next Week.
+  🔗 https://x.com/XBTkaz/status/2105022534458749363</li>
+<li><strong>09-30 20:02</strong>　$BTC
+  Expecting price to sweep the monH today before dumping to hunt out the liquidity on the downside. https://t.co/GBtXBShsp0
+  🔗 https://x.com/XBTkaz/status/2105267038449197404</li>
+</ul>
+<h3>@astronomer_zero（18 条）</h3>
+<ul>
+<li><strong>09-30 21:23</strong>　$btc longs
+  Late/high confirmation entry taken, spinning off from long plan 2 which played out.
+  Bull party is soon over imo, slowly looking for turnaround again now that we are at good short POI's again.
+  So essentially a quick long trade, still bearish overall.
+  Now at that typical point to TP gi
+  🔗 https://x.com/astronomer_zero/status/2105287315509968940</li>
+<li><strong>09-30 21:30</strong>　$btc
+  Flipped longs into shorts here.
+  Alright per plan of reaching short trigger 1, it now offers a good reaction, timing and confluences:
+  ➡️NYO
+  ➡️Midrange
+  ➡️Perp driven move
+  ➡️High amount of liquidations
+  ➡️Mild expectations of a drop into monthly close
+  ➡️Bearish bias
+  Risk:
+  ➡️Confirmation of mid
+  🔗 https://x.com/astronomer_zero/status/2105289220344668483</li>
+<li><strong>09-30 21:39</strong>　$btc shorts
+  Sorry market printing faster than I can type.
+  TP1 good night.
+  Always study, friends https://t.co/vVCZGd5O4Y
+  🔗 https://x.com/astronomer_zero/status/2105291460614787463</li>
+<li><strong>09-30 22:07</strong>　$btc shorts
+  Nice example here of my analysis bias-execution timeframe interaction.
+  The squiggly trigger + how it played out.
+  Hourly chart =&gt; Hourly (analysis timeframe).
+  Divide it by 12 = 5 minute chart for trigger, my personal rule.
+  Plan given, trigger given in advance, and trade entry called
+  🔗 https://x.com/astronomer_zero/status/2105298438967706057</li>
+<li><strong>09-30 22:23</strong>　$btc
+  "Bull party is soon over" Yep...
+  I hope you now understand what it means when I say: to be cautious on longs, and more eager on shorts.
+  Long taken, albeit late, but short taken with conviction and in alignment with bias.
+  Job of the day is truly done.
+  Now just sitting in shorts.
+  🔗 https://x.com/astronomer_zero/status/2105302479948898717</li>
+<li><strong>09-30 23:07</strong>　$btc shorts
+  Now up 1500 points. Took more profits here to lock in the win.
+  Also heading into local support where the original long plan was stated.
+  I.e. key area.
+  Closed 60% of the trade by now.
+  🔗 https://x.com/astronomer_zero/status/2105313477489496308</li>
+<li><strong>09-30 23:49</strong>　$btc - one final hourly update
+  Now perfectly holding low range support again.
+  Which is again where my original long plan sits.
+  Also short plan 1 is done now so I no longer look for triggers there. That means the only long I am interested in is now here at range low. And the only short is at range
+  🔗 https://x.com/astronomer_zero/status/2105324061631091037</li>
+<li>
+<p><strong>10-01 00:19</strong>　Apologies for the slightly high frequency of posts.
+  Market moves fast, I try to update live =&gt; my posts are higher in frequency.
+  Also still decent confusion on timeframes.
+  Always read the title "hourly" "daily" "macro" timeframes or refer to the timeframe on the chart.
+  Otherwise, you may get con
+  🔗 https://x.com/astronomer_zero/status/2105331680940786135</p>
+</li>
+<li>
+<p><strong>10-01 06:20</strong>　$btc
+  Just landed in Dubai.
+  Found some inspiration to continue the series again. https://t.co/ovpbYxr5oK
+  🔗 https://x.com/astronomer_zero/status/2105422628576174446</p>
+</li>
+<li><strong>10-01 07:22</strong>　$BTC shorts - hourly timeframe
+  Flipped short profits into a long again. Can we get back to back W's?
+  All jokes aside, we're back at the long plan, back at range low and are holding it very cleanly.
+  A graceful way to exit the chop, and after staying out of the chop the last three days, it's time t
+  🔗 https://x.com/astronomer_zero/status/2105438167579177094</li>
+<li><strong>09-30 06:10</strong>　$btc - hourly timeframes
+  Yup, this down trending channel is tracking very well so far.
+  I keep holding htf shorts while I only long ltf longs with caution.
+  Drew out this channel and it's the whole reason why I am cautious on longs still since I stated below price may close lower tomorrow.
+  So pers
+  🔗 https://x.com/astronomer_zero/status/2105057748014739773</li>
+<li><strong>09-30 07:11</strong>　$btc - hourly timeframes
+  Range view also updated. is a local long worth it? The language of probabilities + smaller long taken (risky position and the meaning of it)
+  We did indeed trigger long plan. The one valid long is with aggressive TP's up to the area of caution because that's the top of the
+  🔗 https://x.com/astronomer_zero/status/2105072999229718838</li>
+<li><strong>09-30 08:56</strong>　Not interested in scalping longs here anymore/out of the tiny countertrend scalp long I demonstrated an hour ago.
+  Market weak as mentioned due to reasons below and the fact they are high risk and because of bearish thesis given of expecting 75k.
+  So cutting the demonstration, scenario of rolling ov
+  🔗 https://x.com/astronomer_zero/status/2105099334337642685</li>
+<li><strong>09-30 15:04</strong>　$btc - high timeframe shorts
+  Still waiting on further breakdown.
+  It shouldn't be too much longer.
+  Everyone who longed the last week is underwater, and no one really expects a further breakdown/yet they are now being forced out of longs.
+  "The bull market is back"
+  It is, but timing is key. We squ
+  🔗 https://x.com/astronomer_zero/status/2105192133930123597</li>
+<li><strong>09-30 16:46</strong>　$btc - hourly timeframes
+  Another successful pivot down of our down trending channel.
+  Lots of people longed into that weekly open once again, now being rinsed.
+  This channel explains why I am so cautious on longs even if they look "attractive", and why I simply hold htf shorts. https://t.co/FOrWC74
+  🔗 https://x.com/astronomer_zero/status/2105217699915915584</li>
+<li><strong>09-30 19:02</strong>　$btc - hourly timeframes
+  On the range view of the market, we are now heading into the Area of caution (top of the parallel channel).
+  84k longs liquidated, now they flipped short, we saw bullish CVD divs and some OI squeezes, so we saw a small move up here because of that.
+  Also note that this last
+  🔗 https://x.com/astronomer_zero/status/2105251970462433776</li>
+<li><strong>09-30 19:15</strong>　$btc - hourly timeframes
+  From a TPO viewpoint, only seeing poor lows below, and only seeing strong highs above.
+  So from a TPO standpoint, it's also rather irrational to go longing right here right now.
+  As always not to say it can't work. But from a traders-probability perspective, it's just a gam
+  🔗 https://x.com/astronomer_zero/status/2105255126160056403</li>
+<li><strong>09-30 20:49</strong>　$btc - hourly
+  Broke above area of caution.
+  Finally seeing the sideways pa end.
+  Good signal of strength. Took a long here towards midrange.
+  From there, might flip into a short towards poor lows stated earlier, or if long plan 1 actives, hold for longer towards range high.
+  🔗 https://x.com/astronomer_zero/status/2105278740972609568</li>
+</ul>
+<h3>@Luckshuryy（4 条）</h3>
+<ul>
+<li><strong>09-30 22:12</strong>　For reference this is what i use when you see me do live tick replay on a footprint chart.
+  In particular i use this a TON when doing my weekly review of the biggest moves and zooming into actual pivots. https://t.co/j2E1KWOpAe
+  🔗 https://x.com/Luckshuryy/status/2105299838317568467</li>
+<li><strong>09-30 23:48</strong>　if you are trading crypto majors use @Lighter_xyz
+  if you are trading RWAs use @HyperliquidX
+  🔗 https://x.com/Luckshuryy/status/2105323897788969101</li>
+<li><strong>09-30 15:56</strong>　releasing all my @openmarket_xyz layouts that i use EVERYDAY for trading
+  &gt; htf to ltf overview
+  &gt; daily tpo
+  &gt; session tpo
+  &gt; footprint
+  &gt; cvd (absorption)
+  &gt; open interest
+  everything is 100% free!
+  link in bio https://t.co/ypNLMFd6br
+  🔗 https://x.com/Luckshuryy/status/2105205212025917787</li>
+<li><strong>09-30 20:55</strong>　gonna start posting some more market stuff on tg just any sporadic thoughts or notes on markets or anything in general.
+  recommend you join whilst it's open
+  again this is free, join if you want more stuff from me intra-day
+  https://t.co/a7euRWdgY1 https://t.co/2lubx47F7a
+  🔗 https://x.com/Luckshuryy/status/2105280258912215443</li>
+</ul>
+<h3>@TraderJqrit（5 条）</h3>
+<ul>
+<li><strong>09-30 23:26</strong>　RT @TraderJqrit: The only propfirm that never stops improving.
+  @breakoutprop just launched Spark!
+  40x leverage on indices. Limited to 1,5…
+  🔗 https://x.com/TraderJqrit/status/2105318421365944749</li>
+<li><strong>09-30 23:26</strong>　RT @TraderJqrit: @breakoutprop max discount link! 😱👇
+  https://t.co/H1uocZMOJe
+  🔗 https://x.com/TraderJqrit/status/2105318427715842145</li>
+<li><strong>10-01 01:43</strong>　$BTC EQ highs taken ✔️
+  Now im looking at range low liquidity and that untested area of demand to then long it to new highs.
+  HTF market structure remains bullish until proven otherwise. https://t.co/zCR7piDxF0
+  🔗 https://x.com/TraderJqrit/status/2105352770471579877</li>
+<li><strong>09-30 17:15</strong>　GM fam!☕️
+  Life is the same as trading.
+  There are higher lows and higher highs, keep going!
+  $BTC $ETH https://t.co/BqwBf472yM
+  🔗 https://x.com/TraderJqrit/status/2105224893449044410</li>
+<li><strong>09-30 19:45</strong>　$BTC plan today.
+  EQ highs above with a untested area of supply.
+  Will look for shorts there once i see LTF confirmation. https://t.co/rhynjQJT8T
+  🔗 https://x.com/TraderJqrit/status/2105262734409359457</li>
+</ul>
+<h3>@LH_btc（2 条）</h3>
+<ul>
+<li><strong>10-01 08:37</strong>　bro how come it’s October already 2026 felt like a blur
+  🔗 https://x.com/LH_btc/status/2105457023903260928</li>
+<li><strong>09-30 09:33</strong>　gmmm happy monthly closee
+  🔗 https://x.com/LH_btc/status/2105108737526845452</li>
+</ul>
+<h3>@trader_maxey（2 条）</h3>
+<ul>
+<li><strong>09-30 21:11</strong>　aster-2:native 这个畜生币终于开始突破了，叙事足够大，不过我对比了一下 $hype , 市值也没有低估太多，只能靠牛市的星辰大海了 https://t.co/p5kvmwABaU
+  🔗 https://x.com/trader_maxey/status/2105284293908128088</li>
+<li><strong>10-01 00:12</strong>　hyperliquid:native 斜向边沿/二次回调，做多试一试 #trading https://t.co/ZS9BzI4IQK
+  🔗 https://x.com/trader_maxey/status/2105330062551867400</li>
+</ul>
+<h3>@Crypto_Moe84（40 条）</h3>
+<ul>
+<li><strong>10-01 04:32</strong>　Charts look so FUCK YOU BULLISH
+  🔗 https://x.com/Crypto_Moe84/status/2105395496034480373</li>
+<li><strong>10-01 04:35</strong>　Bros dont make me Angry
+  You dont buy coffee you dont like and repost...
+  Lower back already broken - I swear dont make me angry
+  🔗 https://x.com/Crypto_Moe84/status/2105396159363584167</li>
+<li><strong>10-01 04:41</strong>　$BTC.D
+  i would not be sursprised if we break here in Q4 2026 down
+  Oh boy....
+  No time to explain https://t.co/JOGBbxzV7C
+  🔗 https://x.com/Crypto_Moe84/status/2105397693132743077</li>
+<li><strong>10-01 04:46</strong>　I'm not a politician
+  Here no blah blah blah - Just ALPHA
+  🔗 https://x.com/Crypto_Moe84/status/2105398796607762893</li>
+<li><strong>10-01 04:53</strong>　ETH/BTC
+  $ETH will pump in Q4 direction ATH
+  No time to explain https://t.co/d26IGQB4ac
+  🔗 https://x.com/Crypto_Moe84/status/2105400560757457245</li>
+<li><strong>10-01 05:02</strong>　you are pre-rich
+  🔗 https://x.com/Crypto_Moe84/status/2105402989406290078</li>
+<li><strong>10-01 05:05</strong>　I would not be surprised if $ETH breaks its ATH in Q4 2026
+  🔗 https://x.com/Crypto_Moe84/status/2105403621273682358</li>
+<li><strong>10-01 05:06</strong>　midterm - election
+  blah blah blah
+  Focus
+  🔗 https://x.com/Crypto_Moe84/status/2105403921497997429</li>
+<li><strong>10-01 05:10</strong>　$ETH
+  You dont think its possible?
+  No time to explain https://t.co/1O4CN2E3Qa
+  🔗 https://x.com/Crypto_Moe84/status/2105405030333378839</li>
+<li><strong>10-01 05:15</strong>　ETH/BTC
+  The question is if you are ready for the Q4 candle
+  Are you? https://t.co/gLQr2p4YXz
+  🔗 https://x.com/Crypto_Moe84/status/2105406213349384594</li>
+<li><strong>10-01 05:18</strong>　ETH/BTC
+  I swear i gave you everything
+  $ETH will be very angry in Q4 https://t.co/N7Oxtuo2r6
+  🔗 https://x.com/Crypto_Moe84/status/2105406911420276923</li>
+<li><strong>10-01 05:24</strong>　Concentrations bros
+  🤣
+  🔗 https://x.com/Crypto_Moe84/status/2105408515846090774</li>
+<li><strong>10-01 05:38</strong>　$BTC.D - ETH/BTC
+  No time to explain https://t.co/I7xib5Gpri
+  🔗 https://x.com/Crypto_Moe84/status/2105411955314041255</li>
+<li><strong>10-01 05:42</strong>　$IGV
+  For my IGV rainbow-boys
+  it will happen in Q4 2026
+  And you cant do anything about it https://t.co/riANbPo9G9
+  🔗 https://x.com/Crypto_Moe84/status/2105412913502486995</li>
+<li><strong>10-01 05:46</strong>　$BTC
+  For my new Followers
+  Pls trust the Uterus
+  Thank you https://t.co/lvRjupApQV
+  🔗 https://x.com/Crypto_Moe84/status/2105413957661933616</li>
+<li><strong>10-01 05:49</strong>　Pls stop drinking alcohol the next 12 months
+  you need FOCUS
+  🔗 https://x.com/Crypto_Moe84/status/2105414844593623080</li>
+<li><strong>10-01 06:18</strong>　$QQQ
+  We dont play games here.
+  Break out here to new ATHs loading.
+  And you cant do anything about it https://t.co/lBtGTSe2hW
+  🔗 https://x.com/Crypto_Moe84/status/2105422058436133056</li>
+<li><strong>10-01 06:35</strong>　ANDY/PEPE
+  ethereum:0x68bbed6a47194eff1cf514b50ea91895597fc91e bottomed vs. ethereum:0x6982508145454ce325ddbe47a25d4ec3d2311933
+  PEPE will run hard. Andy will run harder
+  Dont tell me later i havent told you https://t.co/GHRPrFizE6
+  🔗 https://x.com/Crypto_Moe84/status/2105426374915956804</li>
+<li><strong>10-01 06:46</strong>　PEPE/DOGE
+  $DOGE will run hard
+  ethereum:0x6982508145454ce325ddbe47a25d4ec3d2311933 will run harder than $DOGE
+  ethereum:0x68bbed6a47194eff1cf514b50ea91895597fc91e will run harder than PEPE
+  Rest is history
+  You know that i will come back to all charts.
+  Raise your targets https://t.co/CixfH0cFP8
+  🔗 https://x.com/Crypto_Moe84/status/2105429226954367331</li>
+<li>
+<p><strong>10-01 06:59</strong>　I know the last years made your head sick - you will sell way to early
+  Raise your targets
+  🔗 https://x.com/Crypto_Moe84/status/2105432452646715486</p>
+</li>
+<li>
+<p><strong>09-30 04:02</strong>　Others/BTC - $BTC.D
+  You break this level up  - BTC.D is going to break down
+  No time to explain https://t.co/qPucEs53DR
+  🔗 https://x.com/Crypto_Moe84/status/2105025364485451819</p>
+</li>
+<li><strong>09-30 04:08</strong>　I swear bros - i have no time to explain
+  Need this time to prepare simple lines and feed you with as many charts as possible
+  🔗 https://x.com/Crypto_Moe84/status/2105026925676884195</li>
+<li><strong>09-30 04:10</strong>　Other people write 50 pages Newsletter and send you 50 charts
+  I can better draw simple lines than talk english
+  🔗 https://x.com/Crypto_Moe84/status/2105027359464427859</li>
+<li><strong>09-30 04:14</strong>　Amen
+  God bless us all and keep us and our families healthy
+  🔗 https://x.com/Crypto_Moe84/status/2105028419918737869</li>
+<li><strong>09-30 04:29</strong>　Others/BTC
+  The longest bearmarket here in history of crypto
+  The longest bottoming process in history of crypto
+  =
+  The craziest Altseason in history of Crypto https://t.co/5LxhV5FFaQ
+  🔗 https://x.com/Crypto_Moe84/status/2105032269761323188</li>
+<li><strong>09-30 05:02</strong>　We are  learning, we are  laughing.... together
+  And soon we are winning together
+  🔗 https://x.com/Crypto_Moe84/status/2105040565590978589</li>
+<li><strong>09-30 05:16</strong>　Others/BTC - $BTC.D
+  Only one line beween Pre-rich and rich https://t.co/mGHRmHFiPT
+  🔗 https://x.com/Crypto_Moe84/status/2105044157094133783</li>
+<li><strong>09-30 05:22</strong>　You have to wait years and years to be in the same cycle-situation like we are now for ALTs
+  Dont miss pls
+  🔗 https://x.com/Crypto_Moe84/status/2105045472822104160</li>
+<li><strong>09-30 05:47</strong>　$ARB
+  I dont know much about this project (Fundamentals, Community...) . Not much price-history.
+  1000000X? Of course, when crime starts everything is possible. If team makes shit then ZERO also possible...
+  $1.2 needs to break, important level. Check at this level
+  Bottom should be in.
+  🔗 https://x.com/Crypto_Moe84/status/2105051799358951506</li>
+<li><strong>09-30 05:59</strong>　$VELO
+  Dont miss VELO https://t.co/v73AAdSNAg
+  🔗 https://x.com/Crypto_Moe84/status/2105054859607060679</li>
+<li><strong>09-30 06:13</strong>　If you still fear corrections after the last 2 years crypto - something is wrong with you
+  🔗 https://x.com/Crypto_Moe84/status/2105058301440344341</li>
+<li><strong>09-30 06:46</strong>　Green Crime-Season
+  🔗 https://x.com/Crypto_Moe84/status/2105066653599859198</li>
+<li><strong>09-30 16:24</strong>　Gm friends
+  🔗 https://x.com/Crypto_Moe84/status/2105212116617789836</li>
+<li><strong>09-30 16:26</strong>　Thanks brother. I appreciate it. You are welcome
+  Love you all ❤️
+  🔗 https://x.com/Crypto_Moe84/status/2105212685541359803</li>
+<li><strong>09-30 16:44</strong>　$SOL
+  Simple https://t.co/HI0xfLx4nY
+  🔗 https://x.com/Crypto_Moe84/status/2105217270347673707</li>
+<li><strong>09-30 17:02</strong>　The correction is coming - When this correction is done, your ALTs will go crazy
+  🔗 https://x.com/Crypto_Moe84/status/2105221797952074007</li>
+<li><strong>09-30 17:19</strong>　$Others
+  Cant you see this? https://t.co/oqv2lFD7Jw
+  🔗 https://x.com/Crypto_Moe84/status/2105226020953415785</li>
+<li><strong>09-30 17:29</strong>　Thats normal - not all coins pumping at the same time
+  Dont sell red candles  and buy green candles
+  Patience
+  🔗 https://x.com/Crypto_Moe84/status/2105228451661664710</li>
+<li><strong>09-30 17:41</strong>　$RUSSELL
+  Lets see where this friends finds the bottom https://t.co/XrrZJRRGX8
+  🔗 https://x.com/Crypto_Moe84/status/2105231501130674513</li>
+<li><strong>09-30 20:04</strong>　Q4 2026 will be great
+  Don’t miss
+  🔗 https://x.com/Crypto_Moe84/status/2105267504138371554</li>
+</ul>
+<h3>@nekofrize（Eureka，3 条）</h3>
+<ul>
+<li><strong>10-01 01:30</strong>　RT @Btc_kking: 根据什么开单，就根据什么止损，交易从来都没有一套通用的标准
+  🔗 https://x.com/nekofrize/status/2105349522713133369</li>
+<li><strong>09-30 21:32</strong>　强趋势中，不能假设市场一定会给你最舒服的入场位置。极强单边趋势中的顺势方很少会给到逆势方回调趋势线或缺口打平或止盈的机会，在强趋势回调中出现逆势阻力衰竭并叠加良好跟随后便可直接入场，无需等待回调至静态阻力位。
+  这种做动量交易的做法在阻力位出现支阻互换信号并且出现跟随就打损离场即可。这样也许能以小额止损换取避免踏空和参与主升浪的机会。
+  🔗 https://x.com/nekofrize/status/2104927227695775774</li>
+<li><strong>09-30 11:05</strong>　不想再出门旅游了，三峡游船的旅行计划把整段国庆假期全占用了，好累，我只想在家里躺着
+  🔗 https://x.com/nekofrize/status/2105131890009366621</li>
+</ul>
+<h3>@MinaraCN（4 条）</h3>
+<ul>
+<li><strong>09-30 23:48</strong>　NVDA 该买还是卖？
+  @goan999999 的这次实测里，4 个金融专家 Agent 分头研究，再把多头、空头和风控的判断放到一起分析：
+  公司增长很快，为什么仍然不建议追高？什么条件下值得再考虑？报告里都有具体解释。
+  想看 Minara 分析一个资产值不值得入手，可以直接参考这篇 👇
+  🔗 https://x.com/MinaraCN/status/2105323919356186741</li>
+<li><strong>09-30 16:20</strong>　https://t.co/tG0mEzjtMb
+  🔗 https://x.com/MinaraCN/status/2104848709788028972</li>
+<li><strong>09-30 15:16</strong>　Minara Harness 现已支持 GPT-6.1 Sol 🔔 上下文窗口达 105 万 token。
+  打开 Minara Harness，即可体验新模型 👇
+  https://t.co/z1pBrSXTqo https://t.co/AGX89WEW3c
+  🔗 https://x.com/MinaraCN/status/2105195058047971557</li>
+<li><strong>09-30 16:44</strong>　在 Minara Follow 策略，现在可以自行调整杠杆了。
+  当你看中一套好的策略，即可按自己的风险偏好设置并 Follow，最高支持 5 倍杠杆 👀
+  欢迎体验：https://t.co/Gs0ql1Kuxh https://t.co/tGjbX9sqIM
+  🔗 https://x.com/MinaraCN/status/2105217161199538280</li>
+</ul>
+<h3>@SailorManCrypto（19 条）</h3>
+<ul>
+<li><strong>09-30 21:12</strong>　Study
+  Practice
+  Exercise
+  Execute
+  Bank
+  Every week.
+  “Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution; it represents the wise choice of many alternatives - choice, not chance, determines your destiny.” https://t.co/dBuQVXtnL2
+  🔗 https://x.com/SailorManCrypto/status/2105284698222030909</li>
+<li><strong>09-30 21:38</strong>　Dang!
+  BTC https://t.co/zhMJgKqwKU
+  🔗 https://x.com/SailorManCrypto/status/2105291166371783027</li>
+<li><strong>09-30 22:34</strong>　We are 500 strong. Next stop: 4 digits.
+  Thank you to every single one of you who trusts me with your subscription.
+  The winner is @hicolour, who sniped the 500 slot like a pro.
+  6 months of subs, paid by me.
+  Pop
+  🔗 https://x.com/SailorManCrypto/status/2105305375247573049</li>
+<li><strong>09-30 22:49</strong>　When you realize that this time you also have the quarterly review along with the monthly journaling! https://t.co/uBxwNcmOpx
+  🔗 https://x.com/SailorManCrypto/status/2105309033234039138</li>
+<li><strong>09-30 23:07</strong>　Spark sold out in a few hours.
+  That's what happens when a solid company keeps shipping new products and updates.
+  If you want to join @BreakoutProp as a first-time user, you have 5 days left to grab a shot at the 2x $100K evaluation accounts in my giveaway.
+  Buy a $50K+ evaluation with code 8L3XL5
+  🔗 https://x.com/SailorManCrypto/status/2105313591154852020</li>
+<li>
+<p><strong>10-01 01:25</strong>　RT @SailorManCrypto: The Disruption Desk #04 is live for subs.
+  Russia holds 43% of the world's uranium enrichment. From January 1, 2028, i…
+  🔗 https://x.com/SailorManCrypto/status/2105348402577817933</p>
+</li>
+<li>
+<p><strong>09-30 03:40</strong>　RT @SailorManCrypto: I have longed some GOLD here. https://t.co/L6p19o7eZr
+  🔗 https://x.com/SailorManCrypto/status/2105020026269098245</p>
+</li>
+<li><strong>09-30 04:29</strong>　RT @SailorManCrypto: 68% of traders who used my Breakout code got paid.
+  $1,616,417 withdrawn in total.
+  Breakout's own numbers from early…
+  🔗 https://x.com/SailorManCrypto/status/2105032247996817678</li>
+<li><strong>09-30 04:54</strong>　When people ask: what do we do?
+  Tell them: https://t.co/VQmryMkR3e
+  🔗 https://x.com/SailorManCrypto/status/2105038575829983504</li>
+<li><strong>09-30 15:25</strong>　GM Excellence Seekers! https://t.co/d8bTNsI15d
+  🔗 https://x.com/SailorManCrypto/status/2105197420745556186</li>
+<li><strong>09-30 15:53</strong>　ETH
+  A pretty tradable LTF Range. https://t.co/AtwuyQMb4b
+  🔗 https://x.com/SailorManCrypto/status/2105204460662493328</li>
+<li><strong>09-30 16:07</strong>　RT @SailorManCrypto: Still can't believe so many of you are trusting me with your subscription!
+  All I know is I'm doing my best to build t…
+  🔗 https://x.com/SailorManCrypto/status/2105207896908653037</li>
+<li><strong>09-30 17:34</strong>　Done and dusted.
+  4.5R, secure 3.5R with the partials.
+  Held 1H, sniper entry, zero drawdown, instant displacment.
+  Thanks for playing.
+  ETH https://t.co/f2j2ZGYo0d
+  🔗 https://x.com/SailorManCrypto/status/2105229856396992853</li>
+<li><strong>09-30 18:04</strong>　The Disruption Desk #04 is live for subs.
+  Russia holds 43% of the world's uranium enrichment. From January 1, 2028, its supply to the US goes to zero.
+  The West has to rebuild its whole nuclear fuel chain. A ten year job. And the market dumped the companies that do it with the hyped reactor develop
+  🔗 https://x.com/SailorManCrypto/status/2105237338636816415</li>
+<li><strong>09-30 18:17</strong>　Price is just compressing, most of the time compression is followed by expansion.
+  BTC https://t.co/GMpNRM748A
+  🔗 https://x.com/SailorManCrypto/status/2105240561057779862</li>
+<li><strong>09-30 18:19</strong>　I have secured some and moved SL just below entry, just want to be risk free before PCE and monthly closure.
+  GOLD https://t.co/F3XvDbuXFZ
+  🔗 https://x.com/SailorManCrypto/status/2105241035844595945</li>
+<li><strong>09-30 18:39</strong>　PONS</li>
+<li>Range formation</li>
+<li>Deviation</li>
+<li>Buying pressure</li>
+<li>Bullish divergence</li>
+<li>MSB https://t.co/9iEVgne3Iv
+  🔗 https://x.com/SailorManCrypto/status/2105246188119482629</li>
+<li><strong>09-30 19:30</strong>　How to prepare for PCE… https://t.co/sq8Yf0bOi5
+  🔗 https://x.com/SailorManCrypto/status/2105258957275365441</li>
+<li><strong>09-30 20:25</strong>　RT @SailorManCrypto: Done and dusted.
+  4.5R, secure 3.5R with the partials.
+  Held 1H, sniper entry, zero drawdown, instant displacment.
+  T…
+  🔗 https://x.com/SailorManCrypto/status/2105272943844655255</li>
+</ul>
+<h3>@0xChainMind（14 条）</h3>
+<ul>
+<li><strong>09-30 23:14</strong>　Buy 500 days before the halving
+  Sell 500 days after the halving
+  Keep it simple $BTC https://t.co/YsQMlvHyn1
+  🔗 https://x.com/0xChainMind/status/2105315302334505335</li>
+<li><strong>10-01 00:25</strong>　RT @cryptosymbiiote: $BTC
+  My thesis remains: channel
+  Eventually, we opened weekly below previous May highs, so it keeps the bearish struc…
+  🔗 https://x.com/0xChainMind/status/2105333160850428066</li>
+<li><strong>10-01 01:19</strong>　We are going lower... $BTC https://t.co/E6DfG8kotI
+  🔗 https://x.com/0xChainMind/status/2105346828635951524</li>
+<li><strong>10-01 02:12</strong>　RT @cryptosymbiiote: $BTC
+  We can get one more sweep of EQHs here, but eventually weekly imbalances are likely to be retested historically…
+  🔗 https://x.com/0xChainMind/status/2105360101347316221</li>
+<li><strong>10-01 02:12</strong>　RT @DeFiMidas: 🚨WARNING: $BTC CRASHED EACH TIME DURING U.S. MIDTERM ELECTION!
+  Now it's coming again and this time it won't be an exception…
+  🔗 https://x.com/0xChainMind/status/2105360174810837226</li>
+<li><strong>10-01 04:32</strong>　$BTC
+  Re-accumulation before expansion https://t.co/V9ocjntUuI
+  🔗 https://x.com/0xChainMind/status/2105395449007890860</li>
+<li><strong>10-01 05:04</strong>　If you're a Robinhood degen, this tool is MUST HAVE for you
+  Try it yourself: https://t.co/pf4Cb9wqgy https://t.co/H6R7KxUxBH
+  🔗 https://x.com/0xChainMind/status/2105403331137159276</li>
+<li><strong>10-01 05:04</strong>　RT @0xChainMind: If you're a Robinhood degen, this tool is MUST HAVE for you
+  Try it yourself: https://t.co/pf4Cb9wqgy https://t.co/H6R7Kx…
+  🔗 https://x.com/0xChainMind/status/2105403353161150608</li>
+<li><strong>10-01 05:16</strong>　RT @cryptosymbiiote: Last time we saw these lows on Open Interest, we had a huge dump from 80K May highs to 60K lows
+  Wondering if it plays…
+  🔗 https://x.com/0xChainMind/status/2105406438369526257</li>
+<li><strong>10-01 06:33</strong>　$BTC
+  Same exact bottoming structure as the 2022 bear market
+  Back then stacked lows never got swept and price just ran higher with same re-accumulation, expansion pattern
+  That's why I am sure that bottom is in https://t.co/Fjj8UsmfnH
+  🔗 https://x.com/0xChainMind/status/2105425906315469186</li>
+<li><strong>10-01 06:52</strong>　RT @DeFiMidas: 🚨ELON MUSK IS PULLING EXACT SAME MOVE HE DID 15 YEARS AGO!
+  Look at this closely:
+  Charts are identical, with same post IPO…
+  🔗 https://x.com/0xChainMind/status/2105430571090624844</li>
+<li><strong>09-30 03:13</strong>　What if... $BTC https://t.co/PnYPrya2Nj
+  🔗 https://x.com/0xChainMind/status/2105013210164441545</li>
+<li><strong>09-30 06:17</strong>　My take on $BTC here
+  We still need a correction first, but with how strong we're holding I don't see it going deep
+  Most likely just a retest of the ~75K trendline to flip it back to support
+  From there we are likely to reclaim 92K https://t.co/CuXxu9HCak
+  🔗 https://x.com/0xChainMind/status/2105059326750527917</li>
+<li><strong>09-30 08:29</strong>　RT @DeFiMidas: 🚨WARNING: NEXT $BTC FLUSH CAN START ANY DAY RIGHT NOW!
+  Capitulation has already begun
+  Nobody expects this to plays out, wa…
+  🔗 https://x.com/0xChainMind/status/2105092723741237436</li>
+</ul>
+<h3>@crptAtlas（17 条）</h3>
+<ul>
+<li><strong>10-01 00:26</strong>　RT @cryptosymbiiote: $BTC
+  My thesis remains: channel
+  Eventually, we opened weekly below previous May highs, so it keeps the bearish struc…
+  🔗 https://x.com/crptAtlas/status/2105333413540757884</li>
+<li><strong>10-01 00:26</strong>　RT @0xChainMind: Buy 500 days before the halving
+  Sell 500 days after the halving
+  Keep it simple $BTC https://t.co/YsQMlvHyn1
+  🔗 https://x.com/crptAtlas/status/2105333461167042630</li>
+<li><strong>10-01 01:35</strong>　IT'S NOT FCKING OVER
+  $BTC cycles are always the same... https://t.co/ohAxw2b1ye
+  🔗 https://x.com/crptAtlas/status/2105350795898306561</li>
+<li><strong>10-01 01:35</strong>　RT @crptAtlas: IT'S NOT FCKING OVER
+  $BTC cycles are always the same... https://t.co/ohAxw2b1ye
+  🔗 https://x.com/crptAtlas/status/2105350812469969199</li>
+<li><strong>10-01 02:13</strong>　RT @cryptosymbiiote: $BTC
+  We can get one more sweep of EQHs here, but eventually weekly imbalances are likely to be retested historically…
+  🔗 https://x.com/crptAtlas/status/2105360409616130404</li>
+<li><strong>10-01 02:13</strong>　RT @DeFiMidas: 🚨WARNING: $BTC CRASHED EACH TIME DURING U.S. MIDTERM ELECTION!
+  Now it's coming again and this time it won't be an exception…
+  🔗 https://x.com/crptAtlas/status/2105360516629889532</li>
+<li><strong>10-01 03:03</strong>　XRAY sniped another 25x gem
+  it flagged $VRAX at $439k mcap
+  2 187 holders, 41 308 trades, six passes, 15 seconds
+  avg holder pnl +52.7%
+  avg winrate 71.4%
+  &gt; SMART BUYING
+  19 smart wallets sitting on 47.2% of supply
+  ATH $11.36M
+  25x from where the terminal called it https://t.co/S15pudAS5J
+  🔗 https://x.com/crptAtlas/status/2105373091496968566</li>
+<li><strong>10-01 03:04</strong>　RT @crptAtlas: XRAY sniped another 25x gem
+  it flagged $VRAX at $439k mcap
+  2 187 holders, 41 308 trades, six passes, 15 seconds
+  avg holde…
+  🔗 https://x.com/crptAtlas/status/2105373112682545553</li>
+<li><strong>10-01 05:01</strong>　🚨XRAY WEBSITE IS LIVE
+  Visit: https://t.co/EFHTDmc2fp
+  You no longer need host project yourself
+  Go check any token, any wallet, anytime https://t.co/u7HrHvXK05
+  🔗 https://x.com/crptAtlas/status/2105402628859453549</li>
+<li><strong>10-01 05:01</strong>　RT @crptAtlas: 🚨XRAY WEBSITE IS LIVE
+  Visit: https://t.co/EFHTDmc2fp
+  You no longer need host project yourself
+  Go check any token, any wa…
+  🔗 https://x.com/crptAtlas/status/2105402650179375211</li>
+<li><strong>10-01 05:17</strong>　RT @cryptosymbiiote: Last time we saw these lows on Open Interest, we had a huge dump from 80K May highs to 60K lows
+  Wondering if it plays…
+  🔗 https://x.com/crptAtlas/status/2105406669664485651</li>
+<li><strong>10-01 06:51</strong>　RT @DeFiMidas: 🚨ELON MUSK IS PULLING EXACT SAME MOVE HE DID 15 YEARS AGO!
+  Look at this closely:
+  Charts are identical, with same post IPO…
+  🔗 https://x.com/crptAtlas/status/2105430331566506424</li>
+<li><strong>10-01 06:51</strong>　RT @0xChainMind: $BTC
+  Same exact bottoming structure as the 2022 bear market
+  Back then stacked lows never got swept and price just ran hi…
+  🔗 https://x.com/crptAtlas/status/2105430390819148145</li>
+<li><strong>09-30 03:15</strong>　$BTC IS ABOUT TO COPY 2022 PATTERN
+  the $87K bull trap i warned about is already behind us
+  and the part of 2022 nobody likes to talk about is what came right after the trap
+  if the same structure plays out again, $64K could be here within the next 30 days
+  the 2022 sequence went like this
+  bull tra
+  🔗 https://x.com/crptAtlas/status/2105013553380106377</li>
+<li><strong>09-30 03:15</strong>　RT @crptAtlas: $BTC IS ABOUT TO COPY 2022 PATTERN
+  the $87K bull trap i warned about is already behind us
+  and the part of 2022 nobody like…
+  🔗 https://x.com/crptAtlas/status/2105013571939680390</li>
+<li><strong>09-30 08:31</strong>　RT @0xChainMind: My take on $BTC here
+  We still need a correction first, but with how strong we're holding I don't see it going deep
+  Most…
+  🔗 https://x.com/crptAtlas/status/2105093239271567588</li>
+<li><strong>09-30 08:32</strong>　RT @DeFiMidas: 🚨WARNING: NEXT $BTC FLUSH CAN START ANY DAY RIGHT NOW!
+  Capitulation has already begun
+  Nobody expects this to plays out, wa…
+  🔗 https://x.com/crptAtlas/status/2105093387015881144</li>
+</ul>
+<h3>@Stefan_B_Trades（10 条）</h3>
+<ul>
+<li><strong>09-30 21:24</strong>　Full send so I can short from higher tomorrow or Friday
+  🔗 https://x.com/Stefan_B_Trades/status/2105287689058799907</li>
+<li><strong>09-30 21:31</strong>　✅
+  🔗 https://x.com/Stefan_B_Trades/status/2105289311562387813</li>
+<li><strong>09-30 21:36</strong>　$BTC take profit hit +4.11 R:R.
+  🔗 https://x.com/Stefan_B_Trades/status/2105290580276466038</li>
+<li><strong>09-30 21:47</strong>　Booked profits on most longs and the short I framed Tuesday was given and instant profits
+  Market gave more then enough, ain’t the right time to be greedy https://t.co/2DHkQA0kio
+  🔗 https://x.com/Stefan_B_Trades/status/2105293444436332712</li>
+<li><strong>09-30 22:33</strong>　$BTC Short closed tp hit , done for today
+  Absolutely great price action, can’t complain https://t.co/GorGAWHuN9
+  🔗 https://x.com/Stefan_B_Trades/status/2105305040600650078</li>
+<li><strong>09-30 21:01</strong>　$ZEC finally moving and in good profits 🌊 https://t.co/ud4g0EBzX7
+  🔗 https://x.com/Stefan_B_Trades/status/2105281988030505116</li>
+<li><strong>09-30 11:51</strong>　Gm
+  Next 24 hours I’ll most likely just watch the markets.
+  Made $ZEC and $BTC longs risk free at 1:1 R:R. https://t.co/CuDmyjfWNe
+  🔗 https://x.com/Stefan_B_Trades/status/2105143423342911997</li>
+<li><strong>09-30 16:15</strong>　Market makers won’t make the things easier, I prefer to wait here until tomorrow New York Session
+  Trades I have 2 are risk free, 2 under water
+  🔗 https://x.com/Stefan_B_Trades/status/2105209912712216693</li>
+<li><strong>09-30 18:17</strong>　$BTC plan didn’t changed - I see no reason to dump without taking Monday high first https://t.co/WKZDwlzin1
+  🔗 https://x.com/Stefan_B_Trades/status/2105240670419947806</li>
+<li><strong>09-30 18:48</strong>　$TAO can we send it now? https://t.co/ZwSxCopBW4
+  🔗 https://x.com/Stefan_B_Trades/status/2105248396667978056</li>
+</ul>
+<h3>@rahmath369（4 条）</h3>
+<ul>
+<li><strong>09-30 22:37</strong>　Done for the day.
+  Clean bias.
+  Clear entry.
+  Smart risk.
+  Keep it simple.
+  1/1W https://t.co/kV6Ogc0cbb
+  🔗 https://x.com/rahmath369/status/2105306046638194737</li>
+<li><strong>10-01 00:04</strong>　Trust me, bro.
+  If you truly trust one simple entry model,
+  that one fucking decision can change your entire trading journey.
+  🔗 https://x.com/rahmath369/status/2105327955920740730</li>
+<li><strong>10-01 01:07</strong>　Do you know why trading can take 3–4 years to truly succeed?
+  You can learn a strategy from a course or a mentor.
+  But you can’t download their psychology.
+  You need to experience the losses, the wins, the doubt, the FOMO, and the pressure yourself.
+  That’s why real trading psychology takes years to
+  🔗 https://x.com/rahmath369/status/2105343783055634909</li>
+<li><strong>09-30 20:00</strong>　Focus on the A+ setup.
+  You don’t need to trade every move.
+  You don’t need to catch every opportunity.
+  Wait for the setup that matches your model, execute without hesitation, and let the rest of the market go.
+  Quality over quantity. https://t.co/sgq1nMtT8v
+  🔗 https://x.com/rahmath369/status/2105266536265191853</li>
+</ul>
+<h3>@Crypto_Scient（6 条）</h3>
+<ul>
+<li><strong>09-29 15:08</strong>　$XAU, Stopped
+  On to the next one 🙌 https://t.co/OkZ0G1lAKU
+  🔗 https://x.com/Crypto_Scient/status/2104830676977782915</li>
+<li><strong>09-29 17:52</strong>　$TAO 3D
+  Flipping the daily S/R + 3D200MAs to the upside. https://t.co/V6eHvYvqFX
+  🔗 https://x.com/Crypto_Scient/status/2104871837260005573</li>
+<li><strong>09-30 15:45</strong>　GM ☕️
+  🔗 https://x.com/Crypto_Scient/status/2105202320132964402</li>
+<li><strong>09-30 16:22</strong>　Closing the month here at 26.22R with portfolio up 80% this month majority lead by spot.
+  A great one without saying.
+  3 straight big months.
+  They don't come easy without discipline. https://t.co/BsFtrdCwHy
+  🔗 https://x.com/Crypto_Scient/status/2105211739298246864</li>
+<li><strong>09-30 16:54</strong>　I am eyeing two entries for a fresh swing long on $BTC.
+  1. Sweep and reclaim of the Monday low triggers the first one. Liquidity is resting right under it and a quick raid into that area followed by a reclaim is the aggressive entry. Here I would expect a aggressive breakout tot he upside.
+  2. Pric
+  🔗 https://x.com/Crypto_Scient/status/2105219627492286574</li>
+<li><strong>09-30 18:21</strong>　$SOL, Looking to play this range expecting a early month sell off in October.
+  RSI bear divs three drives, price falling back in the range.
+  Short around $120-121 and look to long around $110.
+  #SOLUSDT https://t.co/9FS8ZQw9me
+  🔗 https://x.com/Crypto_Scient/status/2105241715745661055</li>
+</ul>
+<h3>@market_beggar（3 条）</h3>
+<ul>
+<li><strong>09-29 09:54</strong>　「XPL 持倉追蹤」：第一止盈目標已至，劍指 0.1668🔭
+  承接下方引文，以我發文時的 XPL 價格來算，
+  前幾天已順利完成第一止盈目標位，斬獲 38% 漲幅📈
+  如今，XPL 在摸到 TP1 後，出現了 Stop Hunt 的操縱行為，
+  價格開始出現新一輪回調，我也開始慢慢將部位接回，
+  準備著手開始進行新一輪進攻。
+  //
+  如附圖所示：
+  不得不說，XPL 的洗盤幅度頗大，期間最低甚至有跌到約 0.077，
+  但正如同我在下方引文所述：
+  「只要 0.072 的結構點未被跌破，看漲結構就始終成立」，
+  隨後價格也是順利漲至我預先規劃的 0.1232，
+  在此恭喜所有在車上的朋友們🎉
+  時間回到現
+  🔗 https://x.com/market_beggar/status/2104751532852056457</li>
+<li><strong>09-30 09:45</strong>　「油門仍未踩滿」：BTC 吸籌趨勢評分指標最新數據分享📊
+  承接下方引文，一週前出現的「第二批利潤兌現潮」，
+  如期導致了 BTC 在沖擊 87K 後有所回調，並開啟新一輪窄幅震盪。
+  與此同時，如果從「吸籌趨勢評分」的角度來看，
+  大戶的吸籌積極度相比先前也有所放緩，
+  交互影響下也就導致了漲勢的停滯。
+  //
+  附圖的指標是「BTC 吸籌趨勢評分」，按照慣例，
+  先來幫所有新、老朋友們重溫一次此指標的概念。
+  📊 BTC 吸籌趨勢評分：
+  ➡️ 分析過去一個月內，各族群錢包餘額變化的趨勢，以定義吸籌的強度
+  ➡️ 分數愈接近 1，代表過去一個月內，大型參與者吸籌愈積極
+  ➡️ 分數愈接近 0，代表過去一
+  🔗 https://x.com/market_beggar/status/2105111671610196379</li>
+<li><strong>09-30 19:19</strong>　RT @market_beggar: 「油門仍未踩滿」：BTC 吸籌趨勢評分指標最新數據分享📊
+  承接下方引文，一週前出現的「第二批利潤兌現潮」，
+  如期導致了 BTC 在沖擊 87K 後有所回調，並開啟新一輪窄幅震盪。
+  與此同時，如果從「吸籌趨勢評分」的角度來看，
+  大戶的吸籌…
+  🔗 https://x.com/market_beggar/status/2105256280457961520</li>
+</ul>
+<h3>@OwaisAlpha1（2 条）</h3>
+<ul>
+<li><strong>09-30 15:33</strong>　$BTC Break of Structure (Confirmed)
+  So now we all the confluences we need.
+  1) Break of Structure on Weekly
+  2) 50 SMA Breakout.
+  I don't see major suppl zones if I be honest, If you get $60K then buy.
+  I have to say it, this time it is looking different fam. https://t.co/l9fUT514cp
+  🔗 https://x.com/OwaisAlpha1/status/2105199332517466469</li>
+<li><strong>09-28 22:29</strong>　$BTC Short Trade
+  Entry: CMP
+  SL: 84,551
+  Enjoy and have a great week fam! https://t.co/skzyQhXjUC
+  🔗 https://x.com/OwaisAlpha1/status/2104579167031337197</li>
+</ul>
+<h3>@mdzzi（茶不思，6 条）</h3>
+<ul>
+<li><strong>09-30 07:18</strong>　SDGR不到50亿市值暂时不考虑卖出 https://t.co/PBv2r2IulO
+  🔗 https://x.com/mdzzi/status/2105074738926432298</li>
+<li><strong>09-30 11:13</strong>　能吃点好吃的吗😜 https://t.co/jCmZnKP3TJ
+  🔗 https://x.com/mdzzi/status/2105133849986605100</li>
+<li><strong>09-30 11:36</strong>　@guzi9712 @0xStudy @Polymarket 撸abs的来了.jpg
+  🔗 https://x.com/mdzzi/status/2105139783425290312</li>
+<li><strong>09-30 12:34</strong>　@anymose @star_okx @Haiteng_okx @Mercy_okx @okxchinese mercy给我发的图用一下
+  🔗 https://x.com/mdzzi/status/2105154357042049109</li>
+<li><strong>09-30 12:45</strong>　@iqxsol 默认死了老冯
+  🔗 https://x.com/mdzzi/status/2105157055476895744</li>
+<li><strong>09-30 13:16</strong>　@GuHype 🤣 https://t.co/cYf9tpo99U
+  🔗 https://x.com/mdzzi/status/2105164865686143263</li>
+</ul>
+<h3>@Trader_Dante（2 条）</h3>
+<ul>
+<li><strong>09-28 15:27</strong>　Looks like I’ll be selling silver again this week https://t.co/NJVAPRgwqf
+  🔗 https://x.com/Trader_Dante/status/2104472976296927294</li>
+<li><strong>09-24 15:35</strong>　RT @Capital_Hungry: Bond market boomers tough af ngl, good game boys.
+  🔗 https://x.com/Trader_Dante/status/2103025596393808090</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>本报告由自动流水线生成</strong>：素材窗口 2026-09-30 07:00 ～ 10-01 09:00（北京时间）｜覆盖 29 位博主 / 222 条推文 / 113 张图表。
+<strong>免责声明</strong>：以上全部为各博主公开发言的中文整理与解读，<strong>不构成任何投资建议</strong>；带 ⚠️ 的段落为转发/推广占比高或缺乏可执行条件的内容，请自行分辨。交易有风险，止损自行负责。</p>
+</blockquote>
+<a class="back" href="../">← 返回目录</a>
+</div>
+<footer><div>仅供学习参考，不构成投资建议</div></footer>
+<div class="lightbox" id="lightbox">
+  <div class="lb-close" id="lb-close">✕</div>
+  <div class="lb-stage" id="lb-stage"><img id="lightbox-img" src="" alt=""></div>
+  <div class="hint">双指缩放 · 拖动查看 · 双击复位</div>
+</div>
+<script>
+(function(){
+  var lb = document.getElementById('lightbox');
+  var stage = document.getElementById('lb-stage');
+  var img = document.getElementById('lightbox-img');
+  var close = document.getElementById('lb-close');
+  var scale = 1, tx = 0, ty = 0;
+  var startDist = 0, startScale = 1;
+  var lastX = 0, lastY = 0, startTx = 0, startTy = 0;
+
+  function apply(){ img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')'; }
+  function reset(){ scale = 1; tx = 0; ty = 0; apply(); }
+  function open(src){ img.src = src; reset(); lb.classList.add('active'); }
+  function closeLb(){ lb.classList.remove('active'); }
+
+  function clamp(){
+    if (scale <= 1){ tx = 0; ty = 0; return; }
+    var vw = stage.clientWidth, vh = stage.clientHeight;
+    var dispW = img.offsetWidth * scale;
+    var dispH = img.offsetHeight * scale;
+    var maxTx = Math.max(0, (dispW - vw) / 2);
+    var maxTy = Math.max(0, (dispH - vh) / 2);
+    tx = Math.max(-maxTx, Math.min(maxTx, tx));
+    ty = Math.max(-maxTy, Math.min(maxTy, ty));
+  }
+
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if (t.tagName === 'IMG' && t.id !== 'lightbox-img'){ open(t.src); }
+  });
+  close.addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+
+  stage.addEventListener('touchstart', function(e){
+    if (e.touches.length === 2){
+      startDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+      startScale = scale;
+    } else if (e.touches.length === 1 && scale > 1){
+      lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
+      startTx = tx; startTy = ty;
+    }
+  }, {passive:false});
+
+  stage.addEventListener('touchmove', function(e){
+    e.preventDefault();
+    if (e.touches.length === 2){
+      var d = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+      scale = Math.max(1, Math.min(6, startScale * d / startDist));
+      apply();
+    } else if (e.touches.length === 1 && scale > 1){
+      tx = startTx + (e.touches[0].clientX - lastX);
+      ty = startTy + (e.touches[0].clientY - lastY);
+      clamp();
+      apply();
+    }
+  }, {passive:false});
+
+  stage.addEventListener('dblclick', function(){ if (scale > 1) reset(); else { scale = 2.5; apply(); } });
+  stage.addEventListener('wheel', function(e){ e.preventDefault(); scale = Math.max(1, Math.min(6, scale * (e.deltaY < 0 ? 1.12 : 0.9))); apply(); }, {passive:false});
+})();
+</script>
+</body></html>
